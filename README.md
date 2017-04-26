@@ -1,3 +1,3 @@
-# samikhalildev.github.io
+# https://samikhalildev.github.io/
 
-Here is my webstie file html,css, js, and images
+This is my personal website that I created using HTML, CSS, JS.
