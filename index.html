@@ -28,14 +28,14 @@
 
 			<hr class="top-hr">
 
-			<h2>SOFTWARE ENGINEERING STUDENT</h2>			
+			<h2>SOFTWARE ENGINEERING</h2>			
 
 		</div>
 	</div>
 	<h3 class="bio"> Biography </h3>
 	<hr class="hr-style-heading">
 
-	<p class="info" style="width: 600px;"> Hey, my name is Sami I am a 20-year-old student and an aspiring Software engineer. I am currently studying at Macquarie University in Sydney majoring in Software Engineering. As my course progresses, I look forward to further enhance my knowledge in computer science and build up my coding skills in Java and other programming languages.</p>
+	<p class="info" style="width: 600px;"> Hey, my name is Sami I am an aspiring Software Engineer. I am currently studying at Macquarie University in Sydney majoring in Software. As my course progresses, I look forward to enhance my knowledge in computer science and build up my coding skills in Java and other programming languages.</p>
 
 <div class="bg-colour">
 	<div class="bg2">
@@ -49,7 +49,7 @@
 
 	<p class="info"> This is the very beginning of my journey. Technology and computers are something that I have always been interested in and passionate about since an early age, I have decided to follow my passion and proceed this glorious technology world we live in today.
 	<br><br>
-	During the Easter break, I started coding and designing this web page from scratch, but before I did, my idea was to create a website so I could use it as a portfolio and showcase my side projects. This will also help me to stay active and motivate me to program. I am really looking forward to the future and see what I can accomplish.
+	During the Easter break, I started to code and design this web page from scratch, but before I did, my idea was to create a website so I could use it as a portfolio and showcase some side projects. This will also help me stay active and motivate me to program. I am really looking forward to the future and see what I can accomplish.
 	<br><br>
 	On the other hand, when I am not programming I enjoy playing AAA games, music, going to the gym and hanging out with my friends.
 	</p>
@@ -323,9 +323,7 @@ line(580,80,590,150);
 <hr class="hr-style">
 
 <div class="box">
-	<p>
-	Playing around with variables. Variables are great, they save time and make the code look more efficient.
-	</p>
+
 	<img src="images/samples/ubuntu.jpg" class="all-images" width="350" height="350"/>
 </div>
 
@@ -554,9 +552,7 @@ void drawCastle(int castleLX, int castleRX, int castleY) {
 </div>
 
 <div class="box">
-	<p>
-	Did this on the weekend, happy how the result came out. Used more variables, functions and a loop. I love creating stuff like this from scratch :) 
-	</p>
+
 	<img src="images/samples/harbour-bridge.jpg" class="all-images" width="525" height="250" />
 </div>
 <br class="clear"/>
@@ -564,9 +560,7 @@ void drawCastle(int castleLX, int castleRX, int castleY) {
 <hr class="hr-style">
 
 <div class="box">
-	<p>
-	My favourite Google products, I was not excepting to go this far but I did somehow, and I must say I am pretty satisfied with the outcome. I tried working on my code to make it look more efficient. I guess it is time to move on to something bit more interesting now.
-	</p><br><br>
+
 	<img src="images/samples/google-products.jpg" class="all-images" width="690" height="575"/>
 </div>
 
@@ -841,9 +835,59 @@ public void android(int width, int height, int length) {
 </div>
 <br class="clear"/>
 
+<hr class="hr-style">
+
+<div class="box">
+<pre><code class="language-ruby">int x=0;
+int y=250;
+float R=0;
+float G=R;
+float B=R+G;
+
+public void setup() {
+  size(775, 400);
+}
+
+public void draw() {
+  if (mouseX&lt;width) {
+    background(R, G, B);
+    R+=5;    
+    G+=4;    
+    B+=3;
+  }
+  PFont Google;
+  Google=createFont(&quot;SansSerif.bold-48&quot;, 200);
+  textFont(Google);
+  println(mouseX, mouseY);
+  fill(84, 143, 255);
+  text(&quot;G&quot;, x+80, y);
+  fill(0);
+  fill(255, 60, 60);
+  text(&quot;o&quot;, x+225, y);
+  fill(252, 201, 0);
+  text(&quot;o&quot;, x+330, y);
+  fill(50, 125, 255);
+  text(&quot;g&quot;, x+435, y);
+  fill(116, 183, 58);
+  text(&quot;l&quot;, x+530, y);
+  fill(255, 40, 40);
+  text(&quot;e&quot;, x+560, y);
+}
+
+</code></pre>
+</div>
+
+<div class="box">
+  <video width="525" height="250" class="all-images" autoplay loop>
+  <source src="vid/google.webm" type="video/webm">
+</video>
+</div>
+<br class="clear"/>
+
+
   <!--Insert next project here-->
 
-
+<p class="lastupdated"><i> Last updated: 1 June 2017 </i></p>
 <div class="bg-colour2">
 </div>
 <div class="bg4"> 
@@ -885,7 +929,7 @@ I have developed proficiency and expertise in the following programming language
 </div>
 
 <div class="endblack">
-	<p class="copyright"> Website is fully coded and designed by me. I do not own the photos above except the ones in Code Snippets. </p>
+	<p class="copyright"> Website is fully coded and designed by me. I do not own any of the photos above. </p>
 </div>
 
 
