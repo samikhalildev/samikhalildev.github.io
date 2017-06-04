@@ -58,11 +58,11 @@
 </div>
 
 <div class="bg3">
-	<p class="quote2">"Practice makes perfect."</p>
+	<p class="quote2">"You don't have to be great to get started, but you have to get started to be great."</p>
 </div>
 
 <br>
-<h3 id="code-samples">Code Snippets</h3>
+<h3 id="code-samples">Code Snippets &amp; Small Projects</h3>
 <hr class="hr-style-heading" style="width: 400px;">
 <p style="margin-bottom: 50px;"><i>The program I am using in this semester is Processing, it is built on the Java language and uses a similar syntax. I will be using it to further improve my programming knowledge and practise then move on to Java to work on more interesting stuff.</p></i>
 
@@ -884,10 +884,391 @@ public void draw() {
 </div>
 <br class="clear"/>
 
+<hr class="hr-style">
+
+
+<div class="box">
+  <p>
+  Did this simple game in Prcoessing software that is based on Java during my first semester adding some basic game movements and logic.
+  </p>
+   <video width="900" height="700" class="all-images" autoplay loop>
+  <source src="vid/fizzy.webm" type="video/webm">
+</div>
+
+<div class="box">
+<pre><code class="language-ruby">// Sami Khalil 45164827
+
+int PositionX, PositionY;
+int diam=10; int spacing=5;
+int Xspeed, Yspeed;
+int fizzyDirection;
+
+int timer, start, duration; 
+int lives=5; 
+boolean gameover;
+
+float R, G, B; 
+int value; int reset;
+
+boolean[] reveal = new boolean[16];
+int rupeelength=40;
+
+int [] rupeeX= {115, 115, 115, 205, 295, 385, 475, 565, 655, 655, 655, 565, 475, 385, 295, 205};
+int [] rupeeY= {200, 290, 380, 470, 560, 655, 560, 470, 380, 290, 200, 110, 110, 200, 110, 110};
+
+void setup() {
+  size(810, 810);
+  smooth();
+  PositionX=width/2-spacing*4;
+  PositionY=height/2-spacing*2;
+  value=1;
+  R=255;
+  start = millis();
+  timer = duration = value*60;
+}
+
+void draw() {
+  //RUPEES
+  background(reset);
+  for (int i=0; i&lt;rupeeX.length; i++) {
+    if (PositionX&gt;rupeeX[i]-10 &amp;&amp; PositionX&lt;rupeeX[i]+45) {
+      if (PositionY&gt;rupeeY[i]-10 &amp;&amp; PositionY&lt;rupeeY[i]+45) {
+        reveal[i]=true;
+      }
+    }
+    if (reveal[i]==true) {
+      stroke(PositionX, 0, PositionY, value*200);
+      strokeWeight(random(0, value+2.5));
+      rect(rupeeX[i], rupeeY[i], rupeelength, rupeelength);
+      fill(0, 200, 0);
+      noStroke();
+      rect(rupeeX[i]+3, rupeeY[i]+3, rupeelength-spacing, rupeelength-spacing);
+    } else if (reveal[i]==false) {
+      fill(0);
+      noStroke();
+      rect(0, 0, 0, 0);
+    }
+    //timer
+    if (timer==reset) {
+      PositionX=width/2-spacing*4;
+      PositionY=height/2-spacing*2;
+      Xspeed=0;
+      Yspeed=0;
+      lives=5;
+      timer=60;
+      reveal[i]=false;
+      rupeelength-=reset;
+      start=millis();
+      gameover=false;
+      loop();
+    }
+  }
+
+  strokeWeight(value);
+  fill(0);
+  stroke(R);
+
+  stroke(PositionX-PositionY, PositionY, PositionX, value*200);
+  fill(PositionX, PositionY, PositionX, value*25);
+  rect(90, 90, 630, 630);
+  fill(0);
+
+  //Poles
+  for (int fx=90; fx&lt;=800; fx+=90)
+    for (int fy=90; fy&lt;=800; fy+=90) {
+      ellipse(fx, fy, diam-3, diam-3);
+    }
+    
+  textSize(20);
+  fill(R);
+  if (timer &gt; reset)  timer = duration - (millis() - start)/1000;
+
+  text(&quot;Time Left: &quot;+timer, 590, diam*77);
+  text(&quot;Lives: &quot;+lives, 90, diam*77);
+  text(&quot;Find the Hidden Rupees!&quot;, 90, diam*6);
+  text(&quot;Press 'P' to Pause&quot;, 560, diam*6);
+  fill(0);
+
+  drawFizzy(PositionX, PositionY, fizzyDirection);
+
+  if (gameover==true) {
+    PositionX=width/2;
+    PositionY=height/2;
+    lives=5;
+    start=millis();
+    gameover=false;
+    loop();
+  } 
+  
+  if (lives&lt;=reset) {
+    gameover=true;
+    noLoop();
+    fill(R);
+    textSize(40);
+    text(&quot;Game Over&quot;, width/2-diam*10, height/2-diam*8);
+    textSize(30);
+    text(&quot;Press Any Key to Continue&quot;, width/2-diam*18, height/2+diam*1.3);
+    textSize(25);
+    text(&quot;The edges damage Fizzy!&quot;, width/2-diam*15, height/2+diam*10);
+    fill(0);
+  }
+}
+
+void drawFizzy(int x, int y, int rot) {
+  
+  //Bounce
+  if (x&lt;=90) {
+    Xspeed=-Xspeed;
+    fizzyDirection=value*3;
+    lives--;
+    stroke(R, 0, 0);
+    strokeWeight(value*5);
+    line(90, 90, 90, 720);
+    strokeWeight(value);
+  } 
+
+  if (x&gt;=width-value*120) {
+    Xspeed=-Xspeed;
+    fizzyDirection=value;
+    lives--;
+    stroke(R, 0, 0);
+    strokeWeight(value*5);
+    line(720, 90, 720, 720);
+    strokeWeight(value);
+  } 
+
+  if (y&lt;=90) {
+    Yspeed=-Yspeed;
+    fizzyDirection=0;
+    lives--;
+    stroke(R, 0, 0);
+    strokeWeight(value*5);
+    line(90, 90, 720, 90);
+    strokeWeight(value);
+  } 
+
+  if (y&gt;=height-value*120) {
+    Yspeed=-Yspeed;
+    fizzyDirection=value*2;
+    lives--;
+    stroke(R, 0, 0);
+    strokeWeight(value*5);
+    line(90, 720, 720, 720);
+    strokeWeight(value);
+  }
+  
+    /////FIZZY ROTATION
+
+  if (rot==0) { //270 degress      
+    fill(0);
+    //body
+    rect(x, y, diam*4, diam*3);
+
+    //leftside
+    rect(x-spacing-2, y+spacing, diam-3, diam*1.5);
+    rect(x-spacing*2.5, y+spacing, diam-2, diam*2.5);
+
+    //rightside
+    rect(x+spacing*8, y+spacing, diam-3, diam*1.5);
+    rect(x+spacing*9, y+spacing, diam-2, diam*2.5);
+
+    //eyes
+    fill(255);
+    rect(x+spacing*1.5, y+spacing, diam-2, diam-2);
+    rect(x+spacing*5, y+spacing, diam-2, diam-2);
+
+    fill(0);
+    rect(x+spacing*1.7, y+spacing*1.5, diam-spacing, diam-spacing);
+    rect(x+spacing*5.3, y+spacing*1.5, diam-spacing, diam-spacing);
+
+    //mouth
+    fill(255);
+    rect(x+spacing*2, y+spacing*4.5, diam*2, diam-5);
+
+    //legs
+    fill(0);
+    rect(x-2, y+spacing*5.8, diam+5, diam-3);
+    rect(x+spacing*5.5, y+spacing*5.8, diam+5, diam-3);
+
+    //head
+    rect(x+spacing*1.5, y-spacing*2, diam-3, diam);
+    rect(x+spacing*5, y-spacing*2, diam-3, diam);
+
+    stroke(0);
+    line(x+spacing*2, y-spacing*2, x+spacing*2, y-spacing*3);
+    line(x+spacing*5.7, y-spacing*2, x+spacing*5.7, y-spacing*3);
+    stroke(255);
+  } else if (rot==value) {   //180 degrees     
+
+    //body
+    rect(x+3, y, diam*2.7, diam*4);
+
+    //leftside
+    rect(x+spacing*2.2, y-spacing-2, diam*1.5, diam-3);
+    rect(x+3, y-spacing*2.5, diam*2.3, diam-2);
+
+    //rightside
+    rect(x+spacing*2.2, y+spacing*8, diam*1.5, diam-3);
+    rect(x+1, y+spacing*9, diam*2.5, diam-2);
+
+    //eyes
+    fill(255);
+    rect(x+spacing*3.5, y+spacing, diam-2, diam-2);
+    rect(x+spacing*3.5, y+spacing*5, diam-2, diam-2);
+
+    fill(0);
+    rect(x+spacing*3.4, y+spacing+1.5, diam-spacing, diam-spacing);
+    rect(x+spacing*3.4, y+spacing*5.3, diam-spacing, diam-spacing);
+
+    //mouth
+    fill(255);
+    rect(x+spacing*1.2, y+spacing*2, diam-5, diam*2);
+
+    //legs
+    fill(0);
+    rect(x-3, y-1, diam-3, diam+5);
+    rect(x-3, y+spacing*5.5, diam-3, diam+5);
+
+    //head
+    rect(x+spacing*6, y+spacing, diam, diam-3);
+    rect(x+spacing*6, y+spacing*5, diam, diam-3);
+
+    stroke(0);
+    line(x+spacing*8, y+spacing*1.7, x+spacing*9, y+spacing*1.5);
+    line(x+spacing*8, y+spacing*5.7, x+spacing*9, y+spacing*5.9);
+    stroke(255);
+  } else if (rot==value*2) {   //90 degress 
+
+    //body
+    rect(x, y, diam*4, diam*3);
+
+    //leftside
+    rect(x-spacing-2, y+spacing*2.5, diam-3, diam*1.5);
+    rect(x-spacing*2.5, y+2, diam-2, diam*2.5);
+
+    //rightside
+    rect(x+spacing*8, y+spacing*2.5, diam-3, diam*1.5);
+    rect(x+spacing*9, y+2, diam-2, diam*2.5);
+
+    //eyes
+    fill(255);
+    rect(x+spacing*1.5, y+spacing*3.5, diam-2, diam-2);
+    rect(x+spacing*5, y+spacing*3.5, diam-2, diam-2);
+
+    fill(0);
+    rect(x+spacing*1.7, y+spacing*3.5, diam-spacing, diam-spacing);
+    rect(x+spacing*5.3, y+spacing*3.5, diam-spacing, diam-spacing);
+
+    //mouth
+    fill(255);
+    rect(x+spacing*2, y+3, diam*2, diam-5);
+
+    //legs
+    fill(0);
+    rect(x-2, y-spacing, diam+5, diam-3);
+    rect(x+spacing*5.5, y-spacing, diam+5, diam-3);
+
+    //head
+    rect(x+spacing*1.5, y+spacing*6, diam-3, diam);
+    rect(x+spacing*5, y+spacing*6, diam-3, diam);
+
+    stroke(0);
+    line(x+spacing*2.1, y+spacing*7, x+spacing*2.1, y+spacing*9);
+    line(x+spacing*5.8, y+spacing*7, x+spacing*5.8, y+spacing*9);
+    stroke(255);
+  } else if (rot==value*3) {   //0 degress     
+
+    //body
+    rect(x+3, y, diam*2.7, diam*4);
+
+    //leftside
+    rect(x+spacing*1.5, y-spacing-2, diam*1.5, diam-3);
+    rect(x+spacing+2, y-spacing*2.5, diam*2.3, diam-2);
+
+    //rightside
+    rect(x+spacing*1.5, y+spacing*8, diam*1.5, diam-3);
+    rect(x+spacing+2, y+spacing*9, diam*2.5, diam-2);
+
+    //eyes
+    fill(255);
+    rect(x+spacing*1.5, y+spacing, diam-2, diam-2);
+    rect(x+spacing*1.5, y+spacing*5, diam-2, diam-2);
+
+    fill(0);
+    rect(x+spacing*2, y+spacing+1.5, diam-spacing, diam-spacing);
+    rect(x+spacing*2, y+spacing*5.3, diam-spacing, diam-spacing);
+
+    //mouth
+    fill(255);
+    rect(x+spacing*4.5, y+spacing*2, diam-5, diam*2);
+
+    //legs
+    fill(0);
+    rect(x+spacing*6, y-1, diam-3, diam+5);
+    rect(x+spacing*6, y+spacing*5.5, diam-3, diam+5);
+
+    //head
+    rect(x-spacing*1.3, y+spacing, diam, diam-3);
+    rect(x-spacing*1.3, y+spacing*5, diam, diam-3);
+
+    stroke(0);
+    line(x, y+spacing*1.8, x-spacing*2.3, y+spacing*1.5);
+    line(x, y+spacing*5.5, x-spacing*2.3, y+spacing*5.9);
+    stroke(255);
+  } 
+  
+  //Edges
+  for (int i=90; i&lt;=720; i+=4) {
+    line(i, 90, i, 90);
+    line(i, 720, i, 720);
+    line(90, i, 90, i);
+    line(720, i, 720, i);
+    stroke(value, value*25);
+    strokeWeight(value*5);
+  }
+
+  PositionX+=Xspeed;
+  PositionY+=Yspeed;
+}
+
+void keyPressed() {
+  if (key =='s') {
+    Yspeed=2; 
+    Xspeed=reset;
+    fizzyDirection=0;
+  } 
+  if (key =='a') {
+    Xspeed=-2; 
+    Yspeed=reset;
+    fizzyDirection=value;
+  } 
+  if (key =='w') {
+    Yspeed=-2; 
+    Xspeed=reset;
+    fizzyDirection=value*2;
+  } 
+  if (key =='d') {
+    Xspeed=2; 
+    Yspeed=reset;
+    fizzyDirection=value*3;
+  } 
+  if (key=='p') {
+    noLoop();
+    noStroke();
+    fill(R, 0, 0);
+    ellipse(540, 52, 20, 20);
+  } else {
+    loop();
+  }
+}
+
+</code></pre>
+</div>
+<br class="clear"/>
 
   <!--Insert next project here-->
 
-<p class="lastupdated"><i> Last updated: 1 June 2017 </i></p>
+<p class="lastupdated"><i> Last updated: 4 June 2017 </i></p>
 <div class="bg-colour2">
 </div>
 <div class="bg4"> 
