@@ -296,16 +296,16 @@ p{
 
 .errortext{
 	position: absolute;
-	margin-left: 38%;
+	margin-left: 32%;
 	color: white;
 	margin-top: 125px;
 	text-align: center;
-
+	font-size: 65px;
 }
  .pp{
- 	margin-top: 310px;	
+ 	margin-top: 300px;	
 	position: absolute;
-	margin-left: 23%;
+	margin-left: 20%;
 	text-align: center;
 	color: white;
 	font-size: 20px;
