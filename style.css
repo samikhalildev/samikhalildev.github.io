@@ -50,8 +50,10 @@ li a:hover {
 }
 
 .degreeplan{
-	width: 65%;
+	width: 50%;
 	margin-left: 30px;
+	border: 1;
+	color: #4a88ba;
 }
 
 .workimage-logo{
