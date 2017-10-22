@@ -1,0 +1,136 @@
+<!DOCTYPE>
+
+<html>
+
+<head>
+
+	<title> Work &amp; Skills </title>
+
+	<link rel="stylesheet" href="style.css">
+
+	<link rel="icon" href="images/logo.png">
+	<!-- Google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One|Noto+Sans" rel="stylesheet">
+	
+	<!-- Social media icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Google Chart-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Skills', 'Programming Languages'],
+          ['Java', 6],
+          ['HTML',     9],
+          ['CSS',      8],
+          ['JavaScript',  4],
+          ['Design',    8]
+        ]);
+        var options = {
+        };
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+    </script>
+    	<!-- ^ Google Chart ^-->
+
+  </head>
+
+<body>
+
+	<div class="topside">
+
+	</div>
+
+	<ul>
+
+	<img src="images/logo.png" class="logo" alt="logo">
+
+	<li><a href="hireme.html" class="nav-link">HIRE ME</a></li>
+	<li><a href="projects.html" class="nav-link">PROJECTS</a></li>
+	<li><a href="#" title="You're in the Work &amp; Skills Page" class="nav-link, onmenu">WORK &amp; SKILLS </a></li>
+	<li><a href="index.html" class="nav-link">HOME</a></li>
+
+	</ul>	
+
+		<div class="bgcolour-grey">
+
+				<div class="bg1-experience"> </div>
+
+			<center> <a href="#first-heading"><img src="images/arrow.png" class="quicknav" title="Skip Navigation"> </a> </center> 
+
+			<p class="title"> MY EXPERIENCE &amp; SKILLS </p> <br>
+
+		</div> 
+
+	<div class="bgcolour-blue">
+
+		<div class="bg2-experience"> </div>
+
+			<div class="container">
+		
+				<h3 id="first-heading"> Experience  </h3> <br>
+
+					<div class="text">
+						<img src="images/boatboro.png" class="workimage-logo">
+
+						<h4> <a href="https://www.boatboro.com" target="_blank" class="workheading-text">BoatBoro</a></h4>
+						<p> I am a front-end developer at a small start-up called BoatBoro with a team of students and graduates. BoatBoro is an online based platform that facilitates boat sharing, it allows owners to list their boats to borrowers with ease and peace of mind. I work very closely with the back-end developer to further improve the platform, from fixing bugs to redesigning sections of the website to make it simple for the users. I use HTML, CSS and JavaScript, I am also planning to get into the server side languages soon.</p> <br> <br> <br> <br> <br> <br>
+
+						<img src="images/musicapp.png" class="workimage-logo">
+
+						<h4> <a href="https://www.uts.edu.au/current-students/current-students-information-faculty-engineering-and-it/undergraduate/software" target="_blank" class="workheading-text">Software Development Studio </a> </h4>
+						<p> I joined the Software Development Studio at UTS as part of a programming subject where I worked on a mobile app for the semester with a team of four students. My task was to improve the user interface and app layout using XML on Android Studio IDE. I am currently working to implement a music player lockscreen controls with notification for the app using Java.</p> <br><br><br><br><br>
+					</div>
+			</div>
+
+		<center><a href="#second-heading"><img src="images/arrow.png" alt="arrow" class="quicknav" title="Skip Navigation"> </a> </center>
+
+	</div>
+
+	<div class="bg3-experience">
+
+		<p class="quote">"Everyone has ideas. <br> They may be too busy or lack the confidence <br>or technical ability to carry them out. <br>But I want to carry them out.<br> It is a matter of getting up and doing it." <br> -James Dyson </p>
+
+	</div>
+
+	<h3 id="second-heading" class="heading2-experience"> Skills </h3>
+
+		<center> <div id="piechart" class="piechartstyle"></div> </center>
+
+	<center><a href=""><img src="images/top.png" class="quicknav" alt="arrow" title="Back to the Top"> </a> </center>
+
+		<div class="leftIcon">
+			<center><a href="index.html"><img src="images/previouspage.png" alt="arrow" class="quicknav" title="Previous Page: Home"> </a> </center>
+		</div>
+
+		<div class="rightIcon">
+			<center><a href="projects.html"><img src="images/nextpage.png" alt="arrow" class="quicknav" title="Next Page: Projects"></a> </center> 
+		</div>
+
+		<div class="footer">
+
+		    <h3 class="footer-heading">Thanks for visiting!</h3> 
+		    <p class="footer-info"> Email: <a href="mailto:sami.khalil.dev@gmail.com" class="contact-link">
+		    sami.khalil.dev@gmail.com </a> </p>
+
+		    <center> <img src="images/logo.png" alt="logo" class="footer-logo"> </center>
+		    
+		    <center>
+			<a class="fa fa-linkedin"></a>
+			<a href="https://github.com/samikhalildev" target="_blank" class="fa fa-github"></a>
+			<a class="fa fa-twitter"></a>
+			</center>
+
+		</div>
+
+		<div class="endblack">
+			<p class="copyright"> This website was coded and designed by me. I do not own any of the photos above. </p>
+	</div>
+
+</body>
+
+</html>
