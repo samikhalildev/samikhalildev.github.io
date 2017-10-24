@@ -52,7 +52,668 @@
 
 		<div class="bg2-projects"> </div>
 
+			<div class="container">
+		
+				<h3 id="project1"> Small projects I have built</h3>
 
+							<div class="text">
+
+						<div class="box">
+							<p> Worked on this project on my spare time using Processing software <br> that is built  for visual design to create sketches and it uses the Java <br> language. I have designed  my favourite Google products using basic <br> shapes to help me get familiar with coding. </p>
+							<img src="images/googleproducts.png" width="500" height="450" />
+						</div>
+
+						<div class="box">
+						<pre><code class="language-java">
+int alpha;
+int depth;
+int leSiz;
+int radii;
+
+public void setup() {
+  size(850, 700);
+  background(255);
+
+  alpha=255;
+  depth=0;
+  leSiz=50;
+  radii=25;
+}
+public void draw() {
+  google(150, 100, 200);
+  chrome(415, 100, 100);
+  drive(675, 0);
+
+  youtube(50, 250, 50);
+  googleMaps(300, 235, 50);
+  gmail(575, 250, 50);
+
+  translate(75, 450, 100);
+  googlePlay(335, 450);
+  android(600, 490, 50);
+}
+public void google(int googleyX, int googleyY, int googleDiam) {
+  noStroke();
+  fill(0xffE33D00);
+  arc(googleyX, googleyY, googleDiam+25, googleDiam-20, radians(170), radians(320));
+  fill(alpha);
+  ellipse(googleyX-100, googleyY, googleDiam-150, googleDiam-100);
+  fill(0xffF5B400);
+  arc(googleyX-25, googleyY, googleDiam-30, googleDiam+20, radians(130), radians(210));
+  fill(0xff609CFA);
+  arc(googleyX+35, googleyY+20, googleDiam-60, googleDiam-20, radians(-15), radians(120));
+  fill(0xff4EAF60);
+  arc(googleyX, googleyY, googleDiam+20, googleDiam+50, radians(50), radians(150));
+  fill(alpha);
+  ellipse(googleyX, googleyY+15, googleDiam-75, googleDiam-75);
+
+  fill(0xff609CFA);
+  rect(googleyX-5, googleyY-5, googleDiam-96, googleDiam-160);
+  stroke(alpha);
+  noFill();
+  strokeWeight(depth+40);
+  ellipse(googleyX, googleyY+15, googleDiam+40, googleDiam+40);
+  strokeWeight(depth+1);
+  fill(alpha);
+  quad(googleyX+44, googleyY-30, googleyX+75, googleyY-50, googleyX+100, googleyY-7, googleyX+45, googleyY-7);
+}
+public void chrome(int chromeWidth, int chromeHeight, int parameter) {
+  noStroke();
+  fill(0xffFFD500);
+  ellipse(chromeWidth+45, chromeHeight+15, parameter+30, parameter+70);
+  ellipse(chromeWidth+40, chromeHeight+83, parameter-37, parameter-50);
+  triangle(chromeWidth+30, chromeHeight+43, chromeWidth, chromeHeight+120, chromeWidth+50, chromeHeight+110);
+  fill(alpha);
+  rect(chromeWidth-10, chromeHeight-70, parameter+320, parameter-60);
+
+  //angle
+  fill(0xffEAC505);
+  triangle(chromeWidth+20, chromeHeight-30, chromeWidth+35, chromeHeight-10, chromeWidth+100, chromeHeight-30);
+
+  fill(0xff66BC4A);
+  ellipse(chromeWidth-60, chromeHeight+15, parameter, parameter+40);
+  ellipse(chromeWidth-40, chromeHeight+50, parameter+10, parameter);
+  ellipse(chromeWidth-35, chromeHeight+75, parameter-10, parameter-32);
+  triangle(chromeWidth+5, chromeHeight+90, chromeWidth-1, chromeHeight+120, chromeWidth-50, chromeHeight+108);
+  ellipse(chromeWidth-22, chromeHeight+93, parameter-40, parameter-50);
+  fill(0xff67AF2C);
+  triangle(chromeWidth+30, chromeHeight+45, chromeWidth+10, chromeHeight+50, chromeWidth-1, chromeHeight+122);
+
+  //600
+  fill(0xffF25C4E);
+  ellipse(chromeWidth, chromeHeight-50, parameter+80, parameter-60);
+  ellipse(chromeWidth, chromeHeight-75, parameter+35, parameter-60);
+  ellipse(chromeWidth, chromeHeight-80, parameter, parameter-60);
+  ellipse(chromeWidth-55, chromeHeight-45, parameter-30, parameter-40);
+  triangle(chromeWidth+74, chromeHeight-75, chromeWidth+103, chromeHeight-30, chromeWidth-100, chromeHeight-30);
+  triangle(chromeWidth-92, chromeHeight-50, chromeWidth-102, chromeHeight-30, chromeWidth, chromeHeight+10);
+  triangle(chromeWidth-103, chromeHeight-30, chromeWidth-44, chromeHeight-10, chromeWidth-49, chromeHeight+10);
+  fill(0xff66BC4A);
+  triangle(chromeWidth-100, chromeHeight-40, chromeWidth-104, chromeHeight-28, chromeWidth-81, chromeHeight-13);
+  fill(0xffE0594D);
+  triangle(chromeWidth-45, chromeHeight+35, chromeWidth-100, chromeHeight-40, chromeWidth-45, chromeHeight+10);
+
+  //outline
+  fill(alpha);
+  ellipse(chromeWidth, chromeHeight+10, parameter, parameter);
+  fill(0xff70A7FC);
+  ellipse(chromeWidth, chromeHeight+10, parameter-25, parameter-25);
+  noFill();
+  stroke(alpha);
+  strokeWeight(depth+6);
+  ellipse(chromeWidth, chromeHeight+10, parameter+120, parameter+120);
+} 
+public void drive(int coordX, int coordY) {
+  strokeWeight(depth+1);
+  noStroke();
+  fill(0xffFFE44B);
+  stroke(alpha-55);
+  quad(coordX-25, coordY, coordX+50, coordY, coordX+135, coordY+145, coordX+50, coordY+145);
+  fill(0xff4BAFFF);
+  quad(coordX+135, coordY+145, coordX+95, coordY+215, coordX-60, coordY+215, coordX-40, coordY+145);
+  noStroke();
+  fill(#5992ED);
+  triangle(coordX-20, coordY+145, coordX-60, coordY+215, coordX+10, coordY+145);
+  stroke(alpha-55);
+  fill(0xff53C14C);
+  quad(coordX-25, coordY, coordX+15, coordY+80, coordX-60, coordY+215, coordX-110, coordY+140);
+  noStroke();
+}
+public void youtube(int ytX, int ytY, int Diam) {
+  fill(0xffF23636);
+  rect(ytX, ytY, Diam*4+25, Diam*3, radii+25);
+  fill(alpha);
+  triangle(ytX+85, ytY+45, ytX+85, ytY+110, ytX+150, ytY+75);
+  fill(alpha-155, alpha-155);
+  triangle(ytX+105, ytY+55, ytX+151, ytY+75, ytX+144, ytY+78);
+  noFill();
+  stroke(alpha);
+  strokeWeight(depth+10);
+  rect(ytX, ytY, Diam+175, Diam*3, radii+25);
+}
+public void googleMaps(int mapX, int mapY, int length) {
+  fill(#56B46C);
+  rect(mapX, mapY, length*4.5f, length*4, radii+10);
+  //section
+  strokeWeight(depth+30);
+  noStroke();
+  fill(alpha-45);
+  triangle(mapX+225, mapY+110, mapX+135, mapY+100, mapX+225, mapY+180);
+
+  fill(#F5F5F5);
+  PFont G;
+  G=createFont(&quot;Arial Bold&quot;, leSiz+30);
+  textFont(G);
+  text(&quot;G&quot;, mapX+25, mapY+85);
+
+  //location
+  fill(#E5302A);
+  triangle(mapX+195, mapY+150, mapX+160, mapY+80, mapX+230, mapY+75);
+  fill(alpha-45);
+  stroke(alpha-45);
+  strokeWeight(depth+3);  
+
+  //cove  
+  ellipse(mapX+230, mapY+135, length+5, length+65);
+  ellipse(mapX+225, mapY+140, length, length+50);
+  ellipse(mapX+158, mapY+130, length+5, length+60);
+  ellipse(mapX+163, mapY+130, length, length+42);
+  ellipse(mapX+184, mapY+140, length-40, length-30);
+  ellipse(mapX+204, mapY+145, length-40, length-30);
+
+  strokeWeight(depth+30);  
+  noStroke();
+  fill(#4C95FA);
+  triangle(mapX+25, mapY+195, mapX+115, mapY+115, mapX+200, mapY+195);
+  fill(alpha);
+  rect(mapX+223, mapY+74, length+70, length*3+50);
+  stroke(alpha);
+  line(mapX+210, mapY+185, mapX+115, mapY+100);
+  stroke(0xffFFE655);
+  line(mapX+20, mapY+180, mapX+210, mapY+15);
+  fill(#E5302A);
+  noStroke();
+  ellipse(mapX+195, mapY+30, length+55, length+60);
+  fill(#891F1C);
+  ellipse(mapX+195, mapY+30, length-12, length-12);
+}
+public void gmail(int lX, int lY, int parameter) {
+  fill(#EA6F6B);
+  rect(lX, lY, parameter+175, parameter+100, radii+5);
+  fill(alpha-10);
+  triangle(lX+30, lY, lX+115, lY+60, lX+200, lY);
+  fill(alpha-20);
+  triangle(lX+30, lY+30, lX+115, lY+90, lX+30, lY+150);
+  fill(alpha-10);
+  triangle(lX+30, lY+150, lX+200, lY+30, lX+200, lY+150);
+  fill(alpha-20);
+  triangle(lX+200, lY+30, lX+200, lY+200, lX+95, lY+105);
+  fill(#E36965);
+  triangle(lX+5, lY+15, lX+30, lY+30, lX+30, lY+40);
+  fill(alpha-45);
+  quad(lX+30, lY+40, lX+30, lY+30, lX+115, lY+90, lX+95, lY+105);
+  fill(alpha);
+  rect(lX+130, lY+150, parameter+40, parameter);
+}
+public void translate(int tranX, int tranY, int diameter) {
+  fill(alpha-35);
+  rect(tranX+60, tranY+40, diameter+15, diameter+20, radii+5);
+  fill(alpha-35);
+  stroke(#577276);
+  strokeWeight(depth+10);
+  ellipse(tranX+100, tranY+60, diameter-10, diameter+10);
+
+  noStroke();
+  quad(tranX+70, tranY, tranX+160, tranY, tranX+160, tranY+80, tranX+95, tranY+80);
+  fill(#577276);
+  rect(tranX+80, tranY+70, diameter-20, diameter-88);
+  rect(tranX+110, tranY+58, diameter-87, diameter-80);
+  fill(alpha);
+  rect(tranX+70, tranY, diameter, diameter-58);
+  stroke(#577276);
+  line(tranX+155, tranY+135, tranX+110, tranY+90);
+
+  noStroke();
+  fill(alpha-35);
+  triangle(tranX+160, tranY+120, tranX+130, tranY+150, tranX+165, tranY+145);
+  rect(tranX+105, tranY+85, diameter-82, diameter-95);
+  fill(#3C97F0);
+  rect(tranX, tranY, diameter-25, diameter+30, radii+5);
+  quad(tranX+50, tranY, tranX+70, tranY, tranX+115, tranY+130, tranX+25, tranY+130);
+  fill(#576ED8);
+  triangle(tranX+115, tranY+130, tranX+70, tranY+130, tranX+80, tranY+160);  
+  fill(alpha);
+  triangle(tranX+40, tranY+130, tranX+70, tranY+130, tranX+95, tranY+200);
+
+  fill(#F5F5F5);
+  PFont G;
+  G=createFont(&quot;Arial Bold&quot;, leSiz+25);
+  textFont(G);
+  text(&quot;G&quot;, tranX+15, tranY+85);
+}
+public void googlePlay(int coordX, int coordY) {
+  fill(#FFD529);
+  triangle(coordX, coordY, coordX+200, coordY+100, coordX, coordY+175);
+  fill(#46C6FF);
+  triangle(coordX, coordY, coordX+100, coordY+90, coordX, coordY+175);
+  fill(#44E83D);
+  triangle(coordX, coordY, coordX+100, coordY+90, coordX+130, coordY+65);
+  fill(#E31515);
+  triangle(coordX, coordY+175, coordX+100, coordY+90, coordX+140, coordY+122);
+  noFill();
+  stroke(alpha);
+  strokeWeight(depth+15);
+  triangle(coordX, coordY, coordX+200, coordY+100, coordX, coordY+175);
+}
+public void android(int width, int height, int length) {
+  noStroke();
+  fill(#6BB767);
+  ellipse(width+75, height+20, length+55, length+55);
+  fill(alpha);
+  rect(width+0, height+5, length+100, length+20);
+  ellipse(width+52, height-12, length-40, length-40);
+  ellipse(width+98, height-12, length-40, length-40);
+
+  fill(#6BB767);
+  rect(width+25, height+10, length+50, length);
+  rect(width+25, height+40, length+50, length, radii-15);
+
+  stroke(#6BB767);
+  line(width+12, height+15, width+12, height+50);
+  line(width+137, height+15, width+137, height+50);
+  noStroke();
+  rect(width+45, height+80, length-30, length-5, radii-15);
+  rect(width+88, height+80, length-30, length-5, radii-15);
+  stroke(#6BB767);    
+  strokeWeight(depth+4);
+  line(width+50, height-25, width+40, height-40);
+  line(width+100, height-25, width+110, height-40);
+}
+							</code></pre>
+							</div>
+							<br class="clear"/>
+
+							<center> <a href="#project2"> <img src="images/arrow.png" alt="arrow" class="quicknav" title="Skip Navigation"> </a> </center>
+					<br id="project2"> <br>
+
+            <div class="box">
+              <p> Programmed a simple game in Prcoessing during my first semester, <br> implemented basic game movements and logic. </p>
+              <video width="500" height="500" autoplay loop>
+              <source src="vid/game.webm" type="video/webm">
+            </div>
+
+					<div class="box">
+						<pre><code class="language-java" >
+int PositionX, PositionY;
+int diam=10; int spacing=5;
+int Xspeed, Yspeed;
+int fizzyDirection;
+
+int timer, start, duration; 
+int lives=5; 
+boolean gameover;
+
+float R, G, B; 
+int value; int reset;
+
+boolean[] reveal = new boolean[16];
+int rupeelength=40;
+
+int [] rupeeX= {115, 115, 115, 205, 295, 385, 475, 565, 655, 655, 655, 565, 475, 385, 295, 205};
+int [] rupeeY= {200, 290, 380, 470, 560, 655, 560, 470, 380, 290, 200, 110, 110, 200, 110, 110};
+
+void setup() {
+  size(810, 810);
+  smooth();
+  PositionX=width/2-spacing*4;
+  PositionY=height/2-spacing*2;
+  value=1;
+  R=255;
+  start = millis();
+  timer = duration = value*60;
+}
+
+void draw() {
+  //RUPEES
+  background(reset);
+  for (int i=0; i&lt;rupeeX.length; i++) {
+    if (PositionX&gt;rupeeX[i]-10 &amp;&amp; PositionX&lt;rupeeX[i]+45) {
+      if (PositionY&gt;rupeeY[i]-10 &amp;&amp; PositionY&lt;rupeeY[i]+45) {
+        reveal[i]=true;
+      }
+    }
+    if (reveal[i]==true) {
+      stroke(PositionX, 0, PositionY, value*200);
+      strokeWeight(random(0, value+2.5));
+      rect(rupeeX[i], rupeeY[i], rupeelength, rupeelength);
+      fill(0, 200, 0);
+      noStroke();
+      rect(rupeeX[i]+3, rupeeY[i]+3, rupeelength-spacing, rupeelength-spacing);
+    } else if (reveal[i]==false) {
+      fill(0);
+      noStroke();
+      rect(0, 0, 0, 0);
+    }
+    //timer
+    if (timer==reset) {
+      PositionX=width/2-spacing*4;
+      PositionY=height/2-spacing*2;
+      Xspeed=0;
+      Yspeed=0;
+      lives=5;
+      timer=60;
+      reveal[i]=false;
+      rupeelength-=reset;
+      start=millis();
+      gameover=false;
+      loop();
+    }
+  }
+
+  strokeWeight(value);
+  fill(0);
+  stroke(R);
+
+  stroke(PositionX-PositionY, PositionY, PositionX, value*200);
+  fill(PositionX, PositionY, PositionX, value*25);
+  rect(90, 90, 630, 630);
+  fill(0);
+
+  //Poles
+  for (int fx=90; fx&lt;=800; fx+=90)
+    for (int fy=90; fy&lt;=800; fy+=90) {
+      ellipse(fx, fy, diam-3, diam-3);
+    }
+    
+  textSize(20);
+  fill(R);
+  if (timer &gt; reset)  timer = duration - (millis() - start)/1000;
+
+  text(&quot;Time Left: &quot;+timer, 590, diam*77);
+  text(&quot;Lives: &quot;+lives, 90, diam*77);
+  text(&quot;Find the Hidden Rupees!&quot;, 90, diam*6);
+  text(&quot;Press 'P' to Pause&quot;, 560, diam*6);
+  fill(0);
+
+  drawFizzy(PositionX, PositionY, fizzyDirection);
+
+  if (gameover==true) {
+    PositionX=width/2;
+    PositionY=height/2;
+    lives=5;
+    start=millis();
+    gameover=false;
+    loop();
+  } 
+  
+  if (lives&lt;=reset) {
+    gameover=true;
+    noLoop();
+    fill(R);
+    textSize(40);
+    text(&quot;Game Over&quot;, width/2-diam*10, height/2-diam*8);
+    textSize(30);
+    text(&quot;Press Any Key to Continue&quot;, width/2-diam*18, height/2+diam*1.3);
+    textSize(25);
+    text(&quot;The edges damage Fizzy!&quot;, width/2-diam*15, height/2+diam*10);
+    fill(0);
+  }
+}
+
+void drawFizzy(int x, int y, int rot) {
+  
+  //Bounce
+  if (x&lt;=90) {
+    Xspeed=-Xspeed;
+    fizzyDirection=value*3;
+    lives--;
+    stroke(R, 0, 0);
+    strokeWeight(value*5);
+    line(90, 90, 90, 720);
+    strokeWeight(value);
+  } 
+
+  if (x&gt;=width-value*120) {
+    Xspeed=-Xspeed;
+    fizzyDirection=value;
+    lives--;
+    stroke(R, 0, 0);
+    strokeWeight(value*5);
+    line(720, 90, 720, 720);
+    strokeWeight(value);
+  } 
+
+  if (y&lt;=90) {
+    Yspeed=-Yspeed;
+    fizzyDirection=0;
+    lives--;
+    stroke(R, 0, 0);
+    strokeWeight(value*5);
+    line(90, 90, 720, 90);
+    strokeWeight(value);
+  } 
+
+  if (y&gt;=height-value*120) {
+    Yspeed=-Yspeed;
+    fizzyDirection=value*2;
+    lives--;
+    stroke(R, 0, 0);
+    strokeWeight(value*5);
+    line(90, 720, 720, 720);
+    strokeWeight(value);
+  }
+  
+    /////FIZZY ROTATION
+
+  if (rot==0) { //270 degress      
+    fill(0);
+    //body
+    rect(x, y, diam*4, diam*3);
+
+    //leftside
+    rect(x-spacing-2, y+spacing, diam-3, diam*1.5);
+    rect(x-spacing*2.5, y+spacing, diam-2, diam*2.5);
+
+    //rightside
+    rect(x+spacing*8, y+spacing, diam-3, diam*1.5);
+    rect(x+spacing*9, y+spacing, diam-2, diam*2.5);
+
+    //eyes
+    fill(255);
+    rect(x+spacing*1.5, y+spacing, diam-2, diam-2);
+    rect(x+spacing*5, y+spacing, diam-2, diam-2);
+
+    fill(0);
+    rect(x+spacing*1.7, y+spacing*1.5, diam-spacing, diam-spacing);
+    rect(x+spacing*5.3, y+spacing*1.5, diam-spacing, diam-spacing);
+
+    //mouth
+    fill(255);
+    rect(x+spacing*2, y+spacing*4.5, diam*2, diam-5);
+
+    //legs
+    fill(0);
+    rect(x-2, y+spacing*5.8, diam+5, diam-3);
+    rect(x+spacing*5.5, y+spacing*5.8, diam+5, diam-3);
+
+    //head
+    rect(x+spacing*1.5, y-spacing*2, diam-3, diam);
+    rect(x+spacing*5, y-spacing*2, diam-3, diam);
+
+    stroke(0);
+    line(x+spacing*2, y-spacing*2, x+spacing*2, y-spacing*3);
+    line(x+spacing*5.7, y-spacing*2, x+spacing*5.7, y-spacing*3);
+    stroke(255);
+  } else if (rot==value) {   //180 degrees     
+
+    //body
+    rect(x+3, y, diam*2.7, diam*4);
+
+    //leftside
+    rect(x+spacing*2.2, y-spacing-2, diam*1.5, diam-3);
+    rect(x+3, y-spacing*2.5, diam*2.3, diam-2);
+
+    //rightside
+    rect(x+spacing*2.2, y+spacing*8, diam*1.5, diam-3);
+    rect(x+1, y+spacing*9, diam*2.5, diam-2);
+
+    //eyes
+    fill(255);
+    rect(x+spacing*3.5, y+spacing, diam-2, diam-2);
+    rect(x+spacing*3.5, y+spacing*5, diam-2, diam-2);
+
+    fill(0);
+    rect(x+spacing*3.4, y+spacing+1.5, diam-spacing, diam-spacing);
+    rect(x+spacing*3.4, y+spacing*5.3, diam-spacing, diam-spacing);
+
+    //mouth
+    fill(255);
+    rect(x+spacing*1.2, y+spacing*2, diam-5, diam*2);
+
+    //legs
+    fill(0);
+    rect(x-3, y-1, diam-3, diam+5);
+    rect(x-3, y+spacing*5.5, diam-3, diam+5);
+
+    //head
+    rect(x+spacing*6, y+spacing, diam, diam-3);
+    rect(x+spacing*6, y+spacing*5, diam, diam-3);
+
+    stroke(0);
+    line(x+spacing*8, y+spacing*1.7, x+spacing*9, y+spacing*1.5);
+    line(x+spacing*8, y+spacing*5.7, x+spacing*9, y+spacing*5.9);
+    stroke(255);
+  } else if (rot==value*2) {   //90 degress 
+
+    //body
+    rect(x, y, diam*4, diam*3);
+
+    //leftside
+    rect(x-spacing-2, y+spacing*2.5, diam-3, diam*1.5);
+    rect(x-spacing*2.5, y+2, diam-2, diam*2.5);
+
+    //rightside
+    rect(x+spacing*8, y+spacing*2.5, diam-3, diam*1.5);
+    rect(x+spacing*9, y+2, diam-2, diam*2.5);
+
+    //eyes
+    fill(255);
+    rect(x+spacing*1.5, y+spacing*3.5, diam-2, diam-2);
+    rect(x+spacing*5, y+spacing*3.5, diam-2, diam-2);
+
+    fill(0);
+    rect(x+spacing*1.7, y+spacing*3.5, diam-spacing, diam-spacing);
+    rect(x+spacing*5.3, y+spacing*3.5, diam-spacing, diam-spacing);
+
+    //mouth
+    fill(255);
+    rect(x+spacing*2, y+3, diam*2, diam-5);
+
+    //legs
+    fill(0);
+    rect(x-2, y-spacing, diam+5, diam-3);
+    rect(x+spacing*5.5, y-spacing, diam+5, diam-3);
+
+    //head
+    rect(x+spacing*1.5, y+spacing*6, diam-3, diam);
+    rect(x+spacing*5, y+spacing*6, diam-3, diam);
+
+    stroke(0);
+    line(x+spacing*2.1, y+spacing*7, x+spacing*2.1, y+spacing*9);
+    line(x+spacing*5.8, y+spacing*7, x+spacing*5.8, y+spacing*9);
+    stroke(255);
+  } else if (rot==value*3) {   //0 degress     
+
+    //body
+    rect(x+3, y, diam*2.7, diam*4);
+
+    //leftside
+    rect(x+spacing*1.5, y-spacing-2, diam*1.5, diam-3);
+    rect(x+spacing+2, y-spacing*2.5, diam*2.3, diam-2);
+
+    //rightside
+    rect(x+spacing*1.5, y+spacing*8, diam*1.5, diam-3);
+    rect(x+spacing+2, y+spacing*9, diam*2.5, diam-2);
+
+    //eyes
+    fill(255);
+    rect(x+spacing*1.5, y+spacing, diam-2, diam-2);
+    rect(x+spacing*1.5, y+spacing*5, diam-2, diam-2);
+
+    fill(0);
+    rect(x+spacing*2, y+spacing+1.5, diam-spacing, diam-spacing);
+    rect(x+spacing*2, y+spacing*5.3, diam-spacing, diam-spacing);
+
+    //mouth
+    fill(255);
+    rect(x+spacing*4.5, y+spacing*2, diam-5, diam*2);
+
+    //legs
+    fill(0);
+    rect(x+spacing*6, y-1, diam-3, diam+5);
+    rect(x+spacing*6, y+spacing*5.5, diam-3, diam+5);
+
+    //head
+    rect(x-spacing*1.3, y+spacing, diam, diam-3);
+    rect(x-spacing*1.3, y+spacing*5, diam, diam-3);
+
+    stroke(0);
+    line(x, y+spacing*1.8, x-spacing*2.3, y+spacing*1.5);
+    line(x, y+spacing*5.5, x-spacing*2.3, y+spacing*5.9);
+    stroke(255);
+  } 
+  
+  //Edges
+  for (int i=90; i&lt;=720; i+=4) {
+    line(i, 90, i, 90);
+    line(i, 720, i, 720);
+    line(90, i, 90, i);
+    line(720, i, 720, i);
+    stroke(value, value*25);
+    strokeWeight(value*5);
+  }
+
+  PositionX+=Xspeed;
+  PositionY+=Yspeed;
+}
+
+void keyPressed() {
+  if (key =='s') {
+    Yspeed=2; 
+    Xspeed=reset;
+    fizzyDirection=0;
+  } 
+  if (key =='a') {
+    Xspeed=-2; 
+    Yspeed=reset;
+    fizzyDirection=value;
+  } 
+  if (key =='w') {
+    Yspeed=-2; 
+    Xspeed=reset;
+    fizzyDirection=value*2;
+  } 
+  if (key =='d') {
+    Xspeed=2; 
+    Yspeed=reset;
+    fizzyDirection=value*3;
+  } 
+  if (key=='p') {
+    noLoop();
+    noStroke();
+    fill(R, 0, 0);
+    ellipse(540, 52, 20, 20);
+  } else {
+    loop();
+  }
+}
+			</code></pre>
+		</div>
+
+				<br class="clear"/>
+			</div>
+
+			</div>
 
 		<center><a href="#second-heading"><img src="images/arrow.png" alt="arrow" class="quicknav" title="Skip Navigation"> </a> </center>
 
