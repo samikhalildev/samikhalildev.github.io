@@ -354,7 +354,7 @@ hr.style9 {
 	border-bottom: 1px dashed #fff;
 }
 
-.contact-link-error:hover, .contact-link:hover{
+.contact-link-error:hover, .contact-link:hover, .workheading-text:hover{
 	color: #2a83cc;
 }
 
