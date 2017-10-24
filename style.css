@@ -357,10 +357,10 @@ hr.style9 {
 hr.style14 { 
   border: 0; 
   height: 1px; 
-  background-image: -webkit-linear-gradient(left, #6bace1, #eee, #6bace1);
-  background-image: -moz-linear-gradient(left, #6bace1, #eee, #6bace1);
-  background-image: -ms-linear-gradient(left, #6bace1, #eee, #6bace1);
-  background-image: -o-linear-gradient(left, #6bace1, #eee, #6bace1); 
+  background-image: -webkit-linear-gradient(left, #6bace1, #ffffff, #6bace1);
+  background-image: -moz-linear-gradient(left, #6bace1, #ffffff, #6bace1);
+  background-image: -ms-linear-gradient(left, #6bace1, #ffffff, #6bace1);
+  background-image: -o-linear-gradient(left, #6bace1, #ffffff, #6bace1); 
 }
 
 .contact-link-error:hover, .contact-link:hover, .workheading-text:hover{
