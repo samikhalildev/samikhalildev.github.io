@@ -38,6 +38,66 @@ li a:hover {
 	color: #201e20;
 }
 
+form {
+	margin: auto;
+	width: 300px;
+	padding: 50px;
+}
+
+input{
+	padding: 10px;
+	font-size: inherit;
+}
+
+input[type="text"] {
+	display: block;
+	margin-bottom: 20px;
+	width: 85%;
+}
+
+input[type="email"] {
+	display: block;
+	margin-bottom: 20px;
+	width: 85%;
+}
+
+
+input[type="radio"]{
+	margin: 0 8px 25px 18px;
+}
+
+input[type="submit"]{
+	width: 300px;
+	height: 45px;
+	border: none;
+	background: steelblue;
+	color: white;
+}
+
+input[type="submit"]:hover{
+	background: #201e20;
+}
+
+.form-text{
+	font-weight: bold;
+	font-size: 18px;
+}
+.title{
+	font-size: 30px;
+	font-family: 'Poiret One', cursive;
+	margin-top: 500px;
+	text-align: center;
+	margin-bottom: 500px;
+}
+
+.resume{
+	margin-top: 100px;
+	margin-bottom: 50px;
+	font-size: 65px;
+	color: #2a83cc;
+	font-weight: bold;
+}
+
 .onmenu{
 	color: #1857bf;
 }
@@ -47,6 +107,10 @@ li a:hover {
 
 .bgcolour-blue{
 	background-color: #6bace1;
+}
+
+.getresume-BG{
+	background-color: #eee;
 }
 
 .degreeplan{
@@ -287,14 +351,6 @@ p{
 	font-family: 'Noto Sans';
 }
 
-.title{
-	font-size: 30px;
-	font-family: 'Poiret One', cursive;
-	margin-top: 500px;
-	text-align: center;
-	margin-bottom: 500px;
-}
-
 .quicknav{
 	width: 65px; 
 	height: 65px;
@@ -328,6 +384,9 @@ p{
 	background-color: #6bace1;
 }
 
+.top-margin{
+	margin-top: -40px;
+}
 .sadimage-404{
 	width: 100px;
 	margin-top: 50px;
