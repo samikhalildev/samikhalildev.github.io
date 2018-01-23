@@ -67,11 +67,12 @@ input[type="radio"]{
 }
 
 input[type="submit"]{
-	width: 300px;
+	width: 150px;
 	height: 45px;
 	border: none;
 	background: steelblue;
 	color: white;
+	margin-left: 60px;
 }
 
 input[type="submit"]:hover{
@@ -106,6 +107,10 @@ input[type="submit"]:hover{
 
 .bgcolour-blue{
 	background-color: #6bace1;
+}
+
+.getresume-BG{
+	background-color: #eee;
 }
 
 .degreeplan{
