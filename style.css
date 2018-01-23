@@ -90,12 +90,11 @@ input[type="submit"]:hover{
 	margin-bottom: 500px;
 }
 
-.resume{
+.otherheading{
 	margin-top: 100px;
 	margin-bottom: 50px;
 	font-size: 65px;
 	color: #2a83cc;
-	font-weight: bold;
 }
 
 .onmenu{
@@ -107,10 +106,6 @@ input[type="submit"]:hover{
 
 .bgcolour-blue{
 	background-color: #6bace1;
-}
-
-.getresume-BG{
-	background-color: #eee;
 }
 
 .degreeplan{
@@ -379,7 +374,7 @@ p{
 	background-color: #6bace1;
 }
 
-.footer-404{
+.footer-custom{
 	height: 449px;
 	background-color: #6bace1;
 }
@@ -387,17 +382,10 @@ p{
 .top-margin{
 	margin-top: -40px;
 }
-.sadimage-404{
+.happy-sadimage{
 	width: 100px;
-	margin-top: 50px;
 }
-
-.errortext{
-	color: #2a83cc;
-	margin-top: 75px;
-	text-align: center;
-	font-size: 65px;
-}
+	
  .pp{
  	margin-top: 50px;	
  	padding-top: 50px;
