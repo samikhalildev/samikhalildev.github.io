@@ -47,6 +47,7 @@ form {
 input{
 	padding: 10px;
 	font-size: inherit;
+	margin-left: 15px;
 }
 
 input[type="text"] {
@@ -72,7 +73,7 @@ input[type="submit"]{
 	border: none;
 	background: steelblue;
 	color: white;
-	margin-left: 60px;
+	margin-left: 75px;
 }
 
 input[type="submit"]:hover{
@@ -82,6 +83,7 @@ input[type="submit"]:hover{
 .form-text{
 	font-weight: bold;
 	font-size: 18px;
+	margin-left: 15px;	
 }
 .title{
 	font-size: 30px;
