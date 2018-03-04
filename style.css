@@ -109,7 +109,7 @@ input[type="submit"]{
 	background: steelblue;
 	color: white;
 	margin-left: 75px;
-	transition: .4s ease;
+	transition: 0.8s ease;
 }
 
 input[type="submit"]:hover{
