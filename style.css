@@ -38,6 +38,10 @@ ul {
     padding-bottom: 2px;
 }
 
+.projects-page{
+	padding-bottom: 5px !important;
+}
+
 li {
 	float:right;
     font-size: 17px;
@@ -48,13 +52,22 @@ li a {
     display: block;
     color: white;
     text-align: right;
-    padding: 20px 10px;
     text-decoration: none;
     font-weight: bold;
+    margin-right: 25px;	
+    padding: 19px 20px;
 }
 
 li a:hover {
-	color: #201e20;
+	color: #f2f2f2;
+	display: block;
+	background-color: #161616; 
+	transition: .3s ease;
+}
+
+.onmenu{
+	color: #1857bf !important;	
+	background-color: #5ca0db !important; 
 }
 
 .center{
@@ -96,6 +109,7 @@ input[type="submit"]{
 	background: steelblue;
 	color: white;
 	margin-left: 75px;
+	transition: .4s ease;
 }
 
 input[type="submit"]:hover{
@@ -166,7 +180,7 @@ input[type="submit"]:hover{
 
 .workimage-logo:hover{
 	opacity: 0.5;
-	transition: .3s ease;
+	transition: .4s ease;
 }
 
 .nbcf-image{
@@ -218,6 +232,15 @@ input[type="submit"]:hover{
 	}
 }
 
+/* Menu Shrink */
+@media only screen and (max-width: 970px) {
+
+	li a {
+    	padding: 19px 10px;
+    	margin-right: 0px;
+	}
+}
+
 /* iPad */
 @media only screen and (max-width: 768px) {
 
@@ -227,11 +250,11 @@ input[type="submit"]:hover{
 
 	li {
 	    font-size: 16px;
-	    margin-right: 60px;
+	    margin-right: 50px;
 	}
 
 	li a {
-	    padding: 20px 0px;
+	    padding: 20px 5px;
 	}
 
 	.bg1-home{    
@@ -290,7 +313,6 @@ input[type="submit"]:hover{
 
 /* Menu Dropdown */
 @media only screen and (max-width: 655px) {
-
 	li {		
 		background-color: #6bace1;
 		float: none;
@@ -307,7 +329,8 @@ input[type="submit"]:hover{
 
 	li a:hover {
 		color: #201e20;
-		background-color: #57a1e0 ;
+		background-color: #57a1e0 ;	
+		transition: .0s;
 	}
 
 	.onmenu{
@@ -547,8 +570,15 @@ p{
 	width: 65px; 
 	height: 65px;
 	margin-top: 75px;
+	transition: transform .35s;
+	margin-bottom: 5px;
 }
 
+.quicknav:hover{
+	-ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 	
+}
 .quicknav-custom{
 	margin-top: 0 !important;
 }
@@ -615,6 +645,7 @@ hr.style14 {
 
 .contact-link-error:hover, .contact-link:hover, .workheading-text:hover{
 	color: #2a83cc;
+	transition: .3s ease;
 }
 
 .footer-heading-404{
@@ -724,7 +755,7 @@ hr.style14 {
     -ms-transform: scale(1.3); /* IE 9 */
     -webkit-transform: scale(1.3); /* Safari 3-8 */
     transform: scale(1.3); 
-}
+	}
 
 	.quote{
 		font-size: 17px !important;
