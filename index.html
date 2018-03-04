@@ -15,6 +15,7 @@
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108743415-1"></script>
+
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
@@ -23,21 +24,25 @@
 	  gtag('config', 'UA-108743415-1');
 	</script>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 	<meta charset="utf-8">
 
     <meta name="Description" CONTENT="Welcome to my online portfolio, this is where I post my skills, expereience and projects.">
     
 	<meta name="keywords" content="Sami khalil, portfolio website, web developer, web designer">
 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link rel="stylesheet" href="style.css">
+
+	<link rel="icon" href="images/favicon.png">
 
 	<!-- Google fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One|Noto+Sans" rel="stylesheet">
 	
 	<!-- Social media icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-	<link rel="icon" href="images/favicon.png">
 
 </head>
 
@@ -55,10 +60,10 @@
 
 	<img src="images/logo.png" class="logo" alt="logo">
 
-	<li><a href="resume.html"  class="nav-link">RESUME</a></li>
-	<li><a href="projects.html" class="nav-link">PROJECTS</a></li>
-	<li><a href="experience.html" class="nav-link">WORK &amp; SKILLS</a></li>
-	<li><a href="#" title="You're in the Home Page" class="nav-link, onmenu" >HOME</a></li>
+	<li><a href="resume.html">RESUME</a></li>
+	<li><a href="projects.html">PROJECTS</a></li>
+	<li><a href="experience.html">WORK &amp; SKILLS</a></li>
+	<li><a href="#" title="You're in the Home Page" class=" onmenu" >HOME</a></li>
 
 	</ul>	
 
@@ -67,11 +72,12 @@
 				<div class="bg1-home"> </div>
 				
 				
-				<center> <a href="#first-section"><img src="images/arrow.png" alt="arrow" class="quicknav" title="Skip Navigation"> </a> </center> 
+				<div class="center"> <a href="#first-section"><img src="images/arrow.png" alt="arrow" class="quicknav" title="Skip Navigation"> </a> </div> 
 
-				<!-- <img src="images/question_mark.png" width="18" alt="arrow" title="
-This tool allows you to skip navigation and quickly jump to the main content by following and clicking on the arrows.
-Please note that following this method will skip some sections of the website. " class="question_mark"> -->
+				<!--- <div class="center"> <img src="images/question_mark.png" width="18" alt="arrow" title="
+					This tool allows you to skip navigation and quickly jump to the main content by following and clicking on the arrows.
+					Please note that following this method will skip some sections of the website. " class="question_mark"> 
+				</div> -->
 			
 			<p class="title"> WELCOME TO MY WEBSITE </p> <br>
 
@@ -87,50 +93,51 @@ Please note that following this method will skip some sections of the website. "
 
 					<div class="text">
 
-						<p> Hi! My name is Sami. I am an aspiring software engineer and designer, I hope to specialize in Software development and web applications. I have just completed my first year majoring in Enterprise Systems Development and Computer Graphics at University of Technology Sydney. <br> <br>
+						<p> Hi! My name is Sami. I am an aspiring software engineer and designer, I hope to specialize in Software development and web applications. I have completed my first year studying B.Sc IT with a programming major at University of Technology Sydney. <br> <br>
 
 						I have been really interested in computers since an early age, when my dad introduced me to Windows 2000, it was exciting!
 						
 						Today, we depend so much on technology and it has changed our lives, the way we find information, communicate with people, share memories and various other things. <br> <br>
 
-						I have a passion and love for coding and design and I am hoping to learn more about Computer Science. My aim for this year is to get more familiar with programming languages, gain experience building projects and possibly look for a summer internship.
+						I have a passion and love for coding and design and I am hoping to learn more about Computer Science. My aim is to get familiar with more programming languages, build projects and find internships.
 						</p>
 					</div>
 			</div>
 
-		<center><a href="#second-section"><img src="images/arrow.png" class="quicknav" alt="arrow" title="Skip Navigation"> </a> </center>
+		<div class="center"> <a href="#second-heading"><img src="images/arrow.png" class="quicknav" alt="arrow" title="Skip Navigation"> </a> </div>
 
 	</div>
 
 	<div class="bg3-home">
 
+	<div class="quote-container">
 		<p class="quote">"SUCCESS IS WALKING <br> FROM FAILURE TO FAILURE <br> WITH NO LOSS OF <br> ENTHUSIASM." <br> -Winston Churchill </p>
-
+	</div>
+		 <h3 id="second-heading" class="hide-heading"></h3>
 	</div>
 
-	<!-- <h3 id="second-heading" class="heading2-home"> Degree Map </h3> -->
 
-	<center> <a href="https://ibb.co/hdNXvm"> <img src="https://preview.ibb.co/f6nzam/Degree_plan.png" id="second-section" alt="degree-map" class="degreeplan" border="5"> </a> </center>
 
-	<center><a href=""><img src="images/top.png" class="quicknav" alt="arrow" title="Back to the Top"></center> </a>
+	<div class="center"> <img src="images/newdegreemap.png" alt="degree-map" class="degreeplan" border="1"> </div>
 
-		<div class="rightIcon" style="margin-right: 0%;">
-			<center><a href="experience.html"><img src="images/nextpage.png" class="quicknav" alt="arrow" title="Next Page: Work &amp; Skills"> </a> </center> 
+	<div class="center"> <a href=""> <img src="images/top.png" class="quicknav" alt="arrow" title="Back to the Top"> </div> </a>
+
+		<div class="rightIcon">
+			<a href="experience.html"><img src="images/nextpage.png" class="quicknav" alt="arrow" title="Next Page: Work &amp; Skills"> </a>
 		</div>
 
 		<div class="footer">
 
-		    <h3 class="footer-heading" style="margin-left: 5%;">Thanks for visiting!</h3> 
-		    <p class="footer-info" style="margin-left: 5%;"> Email: <a href="mailto:sami.khalil.dev@gmail.com" class="contact-link">
-		    sami.khalil.dev@gmail.com </a> </p>
+		    <h3 class="footer-heading fm" >Thanks for visiting!</h3> 
+		    <p class="footer-info fm"> Email: <a href="mailto:sami.khalil.dev@gmail.com" class="contact-link"> sami.khalil.dev@gmail.com </a> </p>
 
-			<center> <img src="images/logo.png" alt="logo" class="footer-logo"> </center>
-
-			<center>
+			<div class="center"> <img src="images/logo.png" alt="logo" class="footer-logo"> 
+			
+			<br>
 			<a href="https://www.linkedin.com/in/sami-khalil-8aa127149/" target="_blank" class="fa fa-linkedin"></a>
 			<a href="https://github.com/samikhalildev" target="_blank" class="fa fa-github"></a>
-			<a class="fa fa-twitter"></a>
-			</center>
+			<a class="fa fa-youtube"></a>
+			</div>
 
 		</div>
 

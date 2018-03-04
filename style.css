@@ -15,20 +15,20 @@ html,body{
 ul {
     list-style-type: none;
     margin: 0px;
-    overflow: hidden;
     background-color: #6bace1;
+    padding-bottom: 2px;
 }
 
 li {
-    float: right;
-    font-size: 18px;
-    margin-right: 75px;
+	float:right;
+    font-size: 17px;
+    margin-right: 70px;
 }
 
 li a {
     display: block;
     color: white;
-    text-align: center;
+    text-align: right;
     padding: 20px 10px;
     text-decoration: none;
     font-weight: bold;
@@ -36,6 +36,10 @@ li a {
 
 li a:hover {
 	color: #201e20;
+}
+
+.center{
+	text-align: center;
 }
 
 form {
@@ -62,7 +66,6 @@ input[type="email"] {
 	width: 85%;
 }
 
-
 input[type="radio"]{
 	margin: 0 8px 25px 18px;
 }
@@ -85,7 +88,16 @@ input[type="submit"]:hover{
 	font-size: 18px;
 	margin-left: 10px;	
 }
+
 .title{
+	font-size: 30px;
+	font-family: 'Poiret One', cursive;
+	margin-top: 500px;
+	text-align: center;
+	margin-bottom: 500px;
+}
+
+.titleresume{
 	font-size: 30px;
 	font-family: 'Poiret One', cursive;
 	margin-top: 500px;
@@ -101,7 +113,7 @@ input[type="submit"]:hover{
 }
 
 .onmenu{
-	color: #1857bf;
+	color: #1857bf !important;
 }
 .bgcolour-grey{
 	background-color: #eee;
@@ -117,8 +129,14 @@ input[type="submit"]:hover{
 
 .degreeplan{
 	width: 50%;
-	margin-left: 30px;
 	color: #4a88ba;
+	transition: transform .5s;
+}
+
+.degreeplan:hover {
+    -ms-transform: scale(1.6); /* IE 9 */
+    -webkit-transform: scale(1.6); /* Safari 3-8 */
+    transform: scale(1.6); 
 }
 
 .workimage-logo{
@@ -127,11 +145,23 @@ input[type="submit"]:hover{
 	margin-right: 50px;
 }
 
+.workimage-logo:hover{
+	opacity: 0.5;
+	transition: .3s ease;
+}
+
+.nbcf-image{
+	margin-top: -10px;
+	width: 165px;
+	margin-bottom: -25px;
+}
+
 .workheading-text{
 	color: white;
 	text-decoration: none;
 	font-size: 30px;
 }
+
 /* Background images taken from unsplash and pexels */
 
 .bg1-home{
@@ -151,6 +181,124 @@ input[type="submit"]:hover{
 	background-size: cover;
 	height: 700px;
 	margin-bottom: 200px;
+}
+
+/* Laptop */
+@media only screen and (max-width: 992px) {
+	.degreeplan{
+		width: 75%;
+	}
+	.degreeplan:hover {
+	    -ms-transform: scale(1.4); /* IE 9 */
+	    -webkit-transform: scale(1.4); /* Safari 3-8 */
+	    transform: scale(1.4); 
+	}
+
+}
+
+/* iPad */
+@media only screen and (max-width: 768px) {
+
+	.logo{
+		margin-left: 0 !important
+	}
+
+	li {
+	    font-size: 16px;
+	    margin-right: 60px;
+	}
+
+	li a {
+	    padding: 20px 0px;
+	}
+
+	.bg1-home{    
+		background-position: 70%;
+	}
+
+	.bg2-home, .bg2-experience, .bg2-projects{
+		height: 350px !important;
+		margin-bottom:100px !important;
+	}
+
+	.bg3-home, .bg3-experience, .bg3-projects{
+		height: 350px !important;
+		margin-top: 0px !important;
+		margin-bottom: 100px !important;
+	}
+
+	.quote{
+		font-size:25px !important;
+	}
+
+	.quote-container{
+		padding: 75px !important;
+	}
+
+	.degreeplan{
+		width: 75%;
+	}
+
+	.degreeplan:hover {
+    -ms-transform: scale(1.4); /* IE 9 */
+    -webkit-transform: scale(1.4); /* Safari 3-8 */
+    transform: scale(1.4); 
+	}
+
+	.box {
+		width: 100% !important;
+		clear: both;
+	}
+
+	.googledesign-image{
+		width: 535px !important;
+		height: 500px !important;
+	}
+
+	.gamevideo{
+		width: 540px !important;
+		height: 550px !important;
+	}
+
+	.style14{
+		margin-top:-15px !important;
+		margin-bottom: -25px !important;
+	}
+}
+
+/* Menu Dropdown */
+@media only screen and (max-width: 655px) {
+
+	li {		
+		background-color: #6bace1;
+		float: none;
+	    font-size: 20px;
+	    margin-right: -20px !important;
+	    margin-left: -40px;
+	}
+
+	li a {
+	    display: block;
+	    padding: 15px 75px;	    
+	    color: #eee;
+	}
+
+	li a:hover {
+		color: #201e20;
+		background-color: #57a1e0 ;
+	}
+
+	.onmenu{
+		background-color: #57a1e0 !important;
+	}
+
+	.logo{
+		margin-left: -15px !important
+	}
+
+	.bg1-home{
+		height: 600px;
+	}
 }
 
 .bg1-experience{
@@ -198,9 +346,7 @@ input[type="submit"]:hover{
 	-o-background-size: cover;
 	background-size: cover;
 	height: 700px;
-
 }
-
 
 .bg2-hireme{
 	background: url(images/coding.jpg) no-repeat center center fixed; 
@@ -215,12 +361,16 @@ input[type="submit"]:hover{
 .container{
 	width: 100%;
 	margin-left:15%;
-	padding-bottom: 50px;
 	color: white;
+	margin-top: -50px;
 }
 
 .text{
 	max-width: 70%;
+}
+
+.black{
+	color: black;
 }
 
 .logo{
@@ -233,7 +383,17 @@ input[type="submit"]:hover{
 	float: left;
 	width: 50%;
 	margin-top: 50px;
-	height: 700px;
+	height: 650px;
+}
+
+.googledesign-image{
+	width: 500px;
+	height: 450px;
+}
+
+.gamevideo{
+	width: 500px;
+	height: 500px;
 }
 
 .clear{
@@ -242,12 +402,11 @@ input[type="submit"]:hover{
 
 .bg3-home{
 	background: url(images/13.jpg) no-repeat center center fixed;
-	height: 600px;
+	height: 605px;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	margin-top: 300px;
 	margin-bottom: 200px;
 }
 
@@ -255,9 +414,12 @@ input[type="submit"]:hover{
 	color: white;
 	font-size: 30px;
 	text-align: center;
-	padding: 185px;
 	font-family: 'Poiret One', cursive;
 	text-transform: uppercase;
+}
+
+.quote-container{
+		padding: 165px;
 }
 
 .bg3-experience{
@@ -267,7 +429,6 @@ input[type="submit"]:hover{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	margin-top: 300px;
 	margin-bottom: 200px;
 }
 
@@ -278,7 +439,6 @@ input[type="submit"]:hover{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	margin-top: 300px;
 	margin-bottom: 200px;
 }
 
@@ -304,27 +464,36 @@ input[type="submit"]:hover{
 	margin-bottom: 200px;
 }
 
-.heading2-home{
-	margin-left: 44%; 
+.heading{
+	text-align: center;
 	margin-bottom: 10px;
 }
 
-.heading2-experience{
-	margin-left: 48%;
-	margin-bottom: 10px;
+.hide-heading{
+	opacity: 0.0;
 }
 
-.heading2-projects{
-	margin-left: 46.5%;
-	 margin-bottom: 10px;
+.heading-project{
+	text-align: left;
+	margin-right: 75px !important;
+}
+
+.heading-project-interests{
+	text-align: center;
+	margin-bottom: 60px !important;
 }
 
 .heading2-hireme{
-	margin-left: 45.5%; margin-bottom: 10px; margin-top: 300px;
+	margin-left: 45.5%;
+	margin-bottom: 10px;
+	margin-top: 300px;
 }
+
 .piechartstyle{
-	width: 900px; height: 500px;
+	width: 900px; 
+	height: 500px;
 }
+
 h1{
 	font-size: 65;
 	margin-bottom: 0px;
@@ -349,7 +518,6 @@ h4{
 
 p{
 	font-size: 15px;
-	text-align: justify;
 	font-family: 'Noto Sans';
 }
 
@@ -359,21 +527,21 @@ p{
 	margin-top: 75px;
 }
 
+.quicknav-custom{
+	margin-top: 0 !important;
+}
 .question_mark{
-	margin-left:49.5%;
 	margin-top: 25px;
 }
 
 .leftIcon{
     float:left;
     padding:10px;
-    margin-left: 5%;
 }
 
 .rightIcon{
     float:right;
     padding: 10px;
-    margin-right: 5%;
 }
 
 .footer {
@@ -457,7 +625,7 @@ hr.style14 {
     color: white;
 }
 
-.fa-twitter {
+.fa-youtube {
     background: black;
     color: white;
 }
@@ -466,13 +634,145 @@ hr.style14 {
 	color: white;
 	padding-top: 50px;
 	text-align: center;
-	margin-left: 1%;
 	margin-bottom: 0px;
 }
 .footer-info{
 	font-family: 'Poiret One', cursive;
 	text-align: center;
 	font-weight: bold;
+}
+
+.fm{
+	margin-left: 80px;
+}
+
+/* Mobile Version */
+@media only screen and (max-width: 490px) {
+
+	.title{
+		font-size: 25px;
+		margin-top: 250px;
+		margin-bottom: 250px;
+	}
+
+	.bg1-home, .bg1-experience, .bg1-projects{
+		height:500px;
+	}
+
+	.footer-heading{
+		font-size: 30px; 
+		padding-top: 25px;
+	}
+
+	.fm{
+		margin-left: 0;
+	}
+
+	.rightIcon img, .leftIcon img{
+		display: none;
+	}
+
+	.footer{
+		height:240px;
+	}
+	
+	.footer-logo{
+		margin-top: 20px !important;
+	}
+
+	.fa{
+		margin-top: 40px !important;
+	}
+
+	.degreeplan{
+		width: 85%;
+	}
+
+	.degreeplan:hover {
+    -ms-transform: scale(1.3); /* IE 9 */
+    -webkit-transform: scale(1.3); /* Safari 3-8 */
+    transform: scale(1.3); 
+}
+
+	.quote{
+		font-size: 17px !important;
+	}
+
+	.quote-container{
+		padding: 95px !important;
+	}
+
+	.quote-edit2{
+		padding: 75px !important;
+	}
+
+	.quote2{
+		font-size:16px !important;
+	}
+
+	.experience-margin{
+		margin-bottom: 25px !important;
+	}
+
+	.text p{
+		font-size: 13px !important;
+	}
+
+	.piechartstyle{
+		width: 635px !important;
+		margin-left: -100px !important;
+	}
+
+	.box{
+		width: 100%;
+		margin-top: 0px !important;
+		height: 625px !important;
+
+	}
+
+	.googledesign-image{
+		width: 350px !important;
+		height: 325px !important;
+		margin-left: -40px !important
+	}
+
+	.gamevideo{
+		width: 485px !important;
+		height: 335px !important;
+		margin-left: -105px !important
+	}
+
+	.language-java{
+		margin-top: -100px !important;
+		margin-left: -25px !important;
+		width: 310px !important;
+		font-size: 13px;
+	}
+
+	.style14{
+		margin-top:-85px !important;
+		margin-bottom: 15px !important;
+	}
+
+	.quicknav-custom-mobile{
+		margin-top: -50px !important;
+	}
+
+	form {
+		margin-left: -50px !important;
+		width: 90%;
+	}
+
+	input[type="text"], input[type="email"] {
+		width: 100%;
+	}
+
+	.submitcenter-mobile{
+		text-align: center;
+	}
+	input[type="submit"] {
+		margin-left: 35px;
+	}
 }
 
 .contact-link {
@@ -490,12 +790,10 @@ hr.style14 {
 .endblack{
 	background-color: black;
 	padding: 10px;
-
 }
 
 .copyright{
 	color: white;
 	text-align: center;
-	font-size: 12px;
-	margin-left: 1%;
+	font-size: 11px;
 }
