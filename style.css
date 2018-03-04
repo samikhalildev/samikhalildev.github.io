@@ -659,6 +659,9 @@ hr.style14 {
 		height:500px;
 	}
 
+	.container{
+		margin-top: 0 !important;
+	}
 	.footer-heading{
 		font-size: 30px; 
 		padding-top: 25px;
@@ -731,27 +734,33 @@ hr.style14 {
 	}
 
 	.googledesign-image{
-		width: 350px !important;
-		height: 325px !important;
-		margin-left: -40px !important
+		width: 275px !important;
+		height: 250px !important;
 	}
 
 	.gamevideo{
-		width: 485px !important;
-		height: 335px !important;
-		margin-left: -105px !important
+		width: 400px !important;
+		height: 275px !important;
+		margin-left: -60px !important
 	}
 
 	.language-java{
+		margin-top: -200px !important;
+		width: 245px !important;
+		font-size: 10px;
+	}
+
+	.custom-project-arrow-mobile{
 		margin-top: -100px !important;
-		margin-left: -25px !important;
-		width: 310px !important;
-		font-size: 13px;
 	}
 
 	.style14{
 		margin-top:-85px !important;
 		margin-bottom: 15px !important;
+	}
+	
+	.heading-project-interests{
+		margin-bottom: 0 !important;
 	}
 
 	.quicknav-custom-mobile{
