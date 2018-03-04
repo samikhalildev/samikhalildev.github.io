@@ -66,8 +66,8 @@ li a:hover {
 }
 
 .onmenu{
-	color: #1857bf !important;	
-	background-color: #5ca0db !important; 
+	color: #161616 !important;	
+	background-color: #479ee8 !important; 
 }
 
 .center{
@@ -145,9 +145,6 @@ input[type="submit"]:hover{
 	color: #2a83cc;
 }
 
-.onmenu{
-	color: #1857bf !important;
-}
 .bgcolour-grey{
 	background-color: #eee;
 }
@@ -225,6 +222,7 @@ input[type="submit"]:hover{
 	    -ms-transform: scale(1.4); /* IE 9 */
 	    -webkit-transform: scale(1.4); /* Safari 3-8 */
 	    transform: scale(1.4); 
+
 	}
 
 	.top-arrow{
@@ -704,6 +702,28 @@ hr.style14 {
 
 .fm{
 	margin-left: 80px;
+}
+
+.delay3{
+	animation-delay: 3s;
+}
+
+.delay2{
+	animation-delay: 2s;
+}
+
+.delay1{
+	animation-delay: 1s;
+}
+
+.delay0-2{
+	animation-delay: 0.2s;
+}
+.hidden{
+     opacity:0;
+}
+.visible{
+     opacity:1;
 }
 
 /* Mobile Version */
