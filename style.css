@@ -38,10 +38,6 @@ ul {
     padding-bottom: 2px;
 }
 
-.projects-page{
-	padding-bottom: 5px !important;
-}
-
 li {
 	float:right;
     font-size: 17px;
@@ -55,7 +51,7 @@ li a {
     text-decoration: none;
     font-weight: bold;
     margin-right: 25px;	
-    padding: 19px 20px;
+    padding: 19px 15px;
 }
 
 li a:hover {
@@ -640,6 +636,10 @@ p{
 	font-weight: bold;
 	font-family: 'Poiret One', cursive;
  }
+
+.language-java{
+	height: 650px;
+}
 
 hr.style9 {
 	border-top: 40px dashed #6bace1;

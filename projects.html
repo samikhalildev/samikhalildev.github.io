@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 
 <html>
 
@@ -30,6 +30,12 @@
   	<link rel="stylesheet" href="prism/prism.css" type="text/css" media="screen"/>
   	<script type="text/javascript" src="prism/prism.js"></script>
 
+    <script>                  
+      document.getElementById('video').addEventListener('loadedmetadata', function() {
+        this.currentTime = 1;
+      }, false); 
+    </script>
+
   </head>
 
 <body>
@@ -38,7 +44,7 @@
 
 	</div>
 
-	<ul class="projects-page">
+	<ul>
 
 	<img src="images/logo.png" class="logo" alt="logo">
 
@@ -349,12 +355,16 @@ public void android(int width, int height, int length) {
 
             <div class="box">
               <p id="second-project"> Programmed a simple game in Prcoessing during my first semester, <br> implemented basic game movements and logic. </p>
-              <video class="gamevideo" autoplay loop>
+              <video id="video" class="gamevideo" autoplay loop>
               <source src="vid/game.mp4" type="video/mp4">
               <source src="vid/game.webm" type="video/webm">
               <source src="vid/game.ogg" type="video/ogg">
-              <p> Your browser does not support the video tag. </p>
+              <p> Your browser does not support HTML5 video. </p>
               </video>
+              <script>
+                 document.getElementById('video').currentTime = 1;
+              </script> 
+
             </div>
 
 					<div class="box">
