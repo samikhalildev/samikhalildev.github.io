@@ -432,6 +432,10 @@ input[type="submit"]:hover{
 	width:50px;
 }
 
+.logo:hover {
+    opacity: 0.7;
+}
+
 .box{
 	float: left;
 	width: 50%;
@@ -921,6 +925,10 @@ hr.style14 {
 	width:50px;
 	margin-top: 25px; 
 	margin-bottom: -35px;
+}
+
+.footer-logo:hover{
+	opacity: 0.7;
 }
 
 .endblack{
