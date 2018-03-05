@@ -899,10 +899,16 @@ hr.style14 {
 /* Device Only*/
 @media only screen and (max-device-width: 490px) {
 	.gamevideo{
-		display: none;
+		visibility: hidden;
 	}
 	.game-thumbnail{
 		display: block;
+		margin-top: -250px;
+	}
+
+	.thumbnailedit{
+		text-align: center;
+		font-size: 11px;
 	}
 }
 .contact-link {
