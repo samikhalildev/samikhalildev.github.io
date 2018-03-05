@@ -314,6 +314,7 @@ input[type="submit"]:hover{
 
 
 	.custom-project-arrow-mobile{
+		margin-top: -100px !important;
 		visibility: visible !important;
 	}	
 
@@ -861,9 +862,6 @@ hr.style14 {
 		margin-top: -75px !important;
 	}
 
-	.custom-project-arrow-mobile{
-		margin-top: -100px !important;
-	}
 	.hide-arrow{
 		margin: 0px;
 		visibility: visible;
