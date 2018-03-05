@@ -449,7 +449,7 @@ input[type="submit"]:hover{
 	height: 500px;
 }
 
-.thumbnail-image img, span{
+.game-thumbnail{
 	display: none;
 }
 .clear{
@@ -901,15 +901,15 @@ hr.style14 {
 	.gamevideo{
 		visibility: hidden;
 	}
-	.thumbnail-image img, span{
+	.game-thumbnail{
 		display: block;
-		margin-top: -275px;
+		margin-top: -250px;
 	}
 
 	.thumbnailedit{
 		text-align: center;
 		font-size: 11px;
-		margin-left: 25px;
+		margin-left: 5px;
 		margin-top: 5px;
 	}
 }
