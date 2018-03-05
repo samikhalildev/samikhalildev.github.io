@@ -449,6 +449,9 @@ input[type="submit"]:hover{
 	height: 500px;
 }
 
+.game-thumbnail{
+	visibility: hidden;
+}
 .clear{
 	clear: both;
 }
@@ -849,9 +852,17 @@ hr.style14 {
 		font-size: 10px;
 	}
 
+	.project-container{
+		margin-top: -50px !important;
+		margin-bottom: -50px !important;
+	}
 	.style14{
 		margin-top:-85px !important;
 		margin-bottom: 15px !important;
+	}
+
+	#first-project, #second-project{
+		margin-right: 10px !important;
 	}
 	
 	.heading-project-interests{
@@ -885,6 +896,15 @@ hr.style14 {
 	}
 }
 
+/* Device Only*/
+@media only screen and (max-device-width: 490px) {
+	.gamevideo{
+		display: none;
+	}
+	.game-thumbnail{
+		visibility: visible;
+	}
+}
 .contact-link {
     color: #cce5ff;
     font-size: 14px;
