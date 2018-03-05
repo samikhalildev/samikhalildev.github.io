@@ -449,7 +449,7 @@ input[type="submit"]:hover{
 	height: 500px;
 }
 
-.game-thumbnail{
+.thumbnail-image img, span{
 	display: none;
 }
 .clear{
@@ -901,14 +901,16 @@ hr.style14 {
 	.gamevideo{
 		visibility: hidden;
 	}
-	.game-thumbnail{
+	.thumbnail-image img, span{
 		display: block;
-		margin-top: -250px;
+		margin-top: -275px;
 	}
 
 	.thumbnailedit{
 		text-align: center;
 		font-size: 11px;
+		margin-left: 25px;
+		margin-top: 5px;
 	}
 }
 .contact-link {
