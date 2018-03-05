@@ -450,7 +450,7 @@ input[type="submit"]:hover{
 }
 
 .game-thumbnail{
-	visibility: hidden;
+	display: none;
 }
 .clear{
 	clear: both;
@@ -902,7 +902,7 @@ hr.style14 {
 		display: none;
 	}
 	.game-thumbnail{
-		visibility: visible;
+		display: block;
 	}
 }
 .contact-link {
