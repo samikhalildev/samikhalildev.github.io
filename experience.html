@@ -36,9 +36,9 @@
           ['Skills', 'Programming Languages'],
           ['Java', 6],
           ['HTML5',     9],
-          ['CSS3',      8],
+          ['CSS',      8],
           ['JavaScript',  4],
-          ['jQuery',    4]
+          ['PHP',  3]
         ]);
         var options = {
         };
@@ -58,7 +58,7 @@
 
 	<ul>
 
-	<a href="index.html"> <img src="images/logo.png" class="logo animated bounceInLeft delay0-2" alt="logo" title="Home"> </a>
+	<a href="index.html"> <img src="images/logo.png" class="logo" alt="logo" title="Home"> </a>
 
 	<li><a href="resume.html" >RESUME</a></li>
 	<li><a href="projects.html">PROJECTS</a></li>
@@ -71,7 +71,7 @@
 
 				<div class="bg1-experience"> </div>
 
-			<div class="center"> <a href="#first-heading"><img src="images/arrow.png" class="quicknav top-arrow"> </a> </div> 
+			<div class="center"> <a class="down" href="#first-section"> <img src="images/arrow.png" class="quicknav top-arrow"> </a> </div> 
 
 			<p class="title animated bounceIn delay2"> MY WORK &amp; SKILLS </p> <br>
 
@@ -83,7 +83,7 @@
 
 			<div class="container">
 		
-				<h3 id="first-heading"> Experience  </h3> <br>
+				<h3 id="first-section"> Experience  </h3> <br>
 
 					<div class="text">
 
@@ -104,16 +104,14 @@
 
 						<a href="https://github.com/Leighton070103/TrueRandomMusicPlayer" target="_blank"> <img src="images/musicapp.png" id="third-experience" class="workimage-logo experience-margin"> </a>
 
-						<h4> <a href="https://github.com/Leighton070103/TrueRandomMusicPlayer" target="_blank" class="workheading-text"> Music Player Application </a> </h4>
+						<h4> <a href="https://github.com/Leighton070103/TrueRandomMusicPlayer" target="_blank" class="workheading-text margin-btm"> Music Player Application </a> </h4>
 						<p> Last semester I joined a Software Development Studio where I worked on a mobile app. My task was to improve the user interface and app layout using XML, also worked to implement a music player lockscreen widget on Android Studio IDE.</p>
 					</div>
 
 				<br class="clear"/>
 
 			</div>
-
-		<div class="center"> <a href="#second-heading"><img src="images/arrow.png" alt="arrow" class="quicknav quicknav-custom"> </a> </div>
-
+			<br><br><br><br>
 	</div>
 
 	<div class="bg3-experience">
@@ -123,11 +121,11 @@
 		</div>
 	</div>
 
-	<h3 id="second-heading" class="heading"> Skills </h3>
+	<h3 id="second-section" class="heading"> Skills </h3>
 
 		<center> <div id="piechart" class="piechartstyle"></div> </center>
 
-	<div class="center"> <a href=""> <img src="images/top.png" class="quicknav" alt="arrow"> </a> </div>
+	<div class="center"> <a class="up" href="#"> <img src="images/top.png" class="quicknav" alt="arrow"> </a> </div>
 
 		<div class="leftIcon">
 			<div class="center"> <a href="index.html"><img src="images/previouspage.png" alt="arrow" class="quicknav" title="Home"> </a> </div>
@@ -168,6 +166,26 @@
 	</script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script>
+		$( document ).ready(function() {
+
+			// scroll to the ID "first-section"
+			$('.down').click( function() {
+		     $('html, body').animate({
+		          scrollTop: $('#first-section').offset().top
+		     }, 1000);
+		});
+
+		// scroll to the top
+		if ($('.up')[0]){
+		     $('.up').click(function(){
+		          $('html,body').animate({ scrollTop: 0 }, 1000);
+		     });
+		}
+
+		});
+	 </script>
 
 </body>
 

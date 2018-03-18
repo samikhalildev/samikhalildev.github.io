@@ -101,7 +101,7 @@ input[type="radio"]{
 input[type="submit"]{
 	width: 150px;
 	height: 45px;
-	border: none;
+	border: 2px groove #4b9cdd;
 	background: steelblue;
 	color: white;
 	margin-left: 75px;
@@ -110,6 +110,13 @@ input[type="submit"]{
 
 input[type="submit"]:hover{
 	background: #201e20;
+}
+
+.viewsourcecode{
+	font-size: 15px;
+	margin-left: 0 !important;
+	width: 175px !important;
+	cursor: pointer;
 }
 
 .form-text{
@@ -135,10 +142,15 @@ input[type="submit"]:hover{
 }
 
 .otherheading{
-	margin-top: 100px;
-	margin-bottom: 50px;
-	font-size: 65px;
+	margin-top: 100px !important;
+	margin-bottom: 50px !important;
+	font-size: 65px !important;
 	color: #2a83cc;
+}
+
+.box h4{
+	font-size: 30px;
+	margin-bottom: 10px;
 }
 
 .bgcolour-grey{
@@ -155,7 +167,7 @@ input[type="submit"]:hover{
 
 .degreeplan{
 	width: 50%;
-	color: #4a88ba;
+	border: 1px solid #4a88ba;
 	transition: transform .5s;
 }
 
@@ -213,6 +225,13 @@ input[type="submit"]:hover{
 		visibility: hidden;
 }
 
+/* Projects section 2 columns */
+@media only screen and (max-width: 1264px) {
+	.box {
+		width: 50% !important;
+	}
+}
+
 /* Laptop */
 @media only screen and (max-width: 992px) {
 	.degreeplan{
@@ -236,6 +255,13 @@ input[type="submit"]:hover{
 	li a {
     	padding: 19px 10px;
     	margin-right: 0px;
+	}
+}
+
+/* Projects section 1 column */
+@media only screen and (max-width: 826px) {
+	.box {
+		width: 100% !important;
 	}
 }
 
@@ -286,11 +312,6 @@ input[type="submit"]:hover{
     -ms-transform: scale(1.4); /* IE 9 */
     -webkit-transform: scale(1.4); /* Safari 3-8 */
     transform: scale(1.4); 
-	}
-
-	.box {
-		width: 100% !important;
-		clear: both;
 	}
 
 	.googledesign-image{
@@ -422,6 +443,10 @@ input[type="submit"]:hover{
 	max-width: 70%;
 }
 
+.project-container{
+	max-width: 70%;
+}
+
 .black{
 	color: black;
 }
@@ -438,24 +463,34 @@ input[type="submit"]:hover{
 
 .box{
 	float: left;
-	width: 50%;
+	text-align: center;
+	width: 33%;
 	margin-top: 50px;
-	height: 650px;
 }
 
-.googledesign-image{
-	width: 500px;
-	height: 450px;
+.project-image{
+	width: 275px;
+	height: 250px;
+	border: 2px solid #4a88ba;
+	transition: transform .5s;
+	transition: .5s ease;
 }
 
-.gamevideo{
-	width: 500px;
-	height: 500px;
+.project-text{
+	margin-left: 25px;
+	margin-right: 25px;
 }
 
-.game-thumbnail{
-	display: none;
+.ShoppingCart{
+	width: 250px;
 }
+
+.project-image:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+}
+
 .clear{
 	clear: both;
 }
@@ -831,42 +866,10 @@ hr.style14 {
 		width: 635px !important;
 		margin-left: -100px !important;
 	}
-
-	.box{
-		width: 100%;
-		margin-top: 0px !important;
-		height: 625px !important;
-
-	}
-
-	.googledesign-image{
-		width: 275px !important;
-		height: 250px !important;
-	}
-
-	.gamevideo{
-		width: 400px !important;
-		height: 275px !important;
-		margin-left: -60px !important
-	}
-
-	.language-java{
-		margin-top: -200px !important;
-		width: 245px !important;
-		font-size: 10px;
-	}
-
-	.project-container{
-		margin-top: -50px !important;
-		margin-bottom: -50px !important;
-	}
+	
 	.style14{
 		margin-top:-85px !important;
 		margin-bottom: 15px !important;
-	}
-
-	#first-project, #second-project{
-		margin-right: 10px !important;
 	}
 	
 	.heading-project-interests{
@@ -875,6 +878,10 @@ hr.style14 {
 
 	.quicknav-custom-mobile{
 		margin-top: -75px !important;
+	}
+
+	.project-image{
+		margin-left: -5px !important;
 	}
 
 	.hide-arrow{
@@ -900,21 +907,6 @@ hr.style14 {
 	}
 }
 
-/* Device Only*/
-@media only screen and (max-device-width: 490px) {
-	.gamevideo{
-		visibility: hidden;
-	}
-	.game-thumbnail{
-		display: block;
-		margin-top: -250px;
-	}
-
-	.thumbnailedit{
-		text-align: center;
-		font-size: 11px;
-	}
-}
 .contact-link {
     color: #cce5ff;
     font-size: 14px;
