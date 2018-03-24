@@ -476,6 +476,13 @@ input[type="submit"]:hover{
 	transition: .5s ease;
 }
 
+.project-image-java{
+	width: 250px;
+	border: 2px solid #4a88ba;
+	transition: transform .5s;
+	transition: .5s ease;
+}
+
 .project-text{
 	margin-left: 25px;
 	margin-right: 25px;
@@ -486,6 +493,11 @@ input[type="submit"]:hover{
 }
 
 .project-image:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+}
+.project-image-java:hover {
     -ms-transform: scale(1.5); /* IE 9 */
     -webkit-transform: scale(1.5); /* Safari 3-8 */
     transform: scale(1.5); 
