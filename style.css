@@ -468,6 +468,10 @@ input[type="submit"]:hover{
 	margin-top: 50px;
 }
 
+.movieKiosk{
+	width:250px !important;
+}
+
 .project-image{
 	width: 275px;
 	height: 250px;
@@ -486,10 +490,6 @@ input[type="submit"]:hover{
 .project-text{
 	margin-left: 25px;
 	margin-right: 25px;
-}
-
-.ShoppingCart{
-	width: 250px;
 }
 
 .project-image:hover {
