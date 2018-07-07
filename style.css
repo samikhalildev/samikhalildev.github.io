@@ -230,6 +230,13 @@ input[type="submit"]:hover{
 	.box {
 		width: 50% !important;
 	}
+
+
+	.movieKiosk{
+		width: 300px !important;
+		height: 150px !important;
+		margin-bottom: 0px !important;
+	}
 }
 
 /* Laptop */
@@ -469,7 +476,12 @@ input[type="submit"]:hover{
 }
 
 .movieKiosk{
-	width:250px !important;
+	width: 400px;
+	height: 225px;
+	margin-bottom: 25px;
+	border: 2px solid #4a88ba;
+	transition: transform .5s;
+	transition: .5s ease;
 }
 
 .project-image{
@@ -492,17 +504,12 @@ input[type="submit"]:hover{
 	margin-right: 25px;
 }
 
-.project-image:hover {
+.project-image:hover, .movieKiosk:hover, .project-image-java:hover {
     -ms-transform: scale(1.5); /* IE 9 */
     -webkit-transform: scale(1.5); /* Safari 3-8 */
     transform: scale(1.5); 
 }
-.project-image-java:hover {
-    -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Safari 3-8 */
-    transform: scale(1.5); 
-}
-
+ 
 .clear{
 	clear: both;
 }
