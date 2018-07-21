@@ -225,18 +225,35 @@ input[type="submit"]:hover{
 		visibility: hidden;
 }
 
+.clearOniPadPro, .clearOniPad{
+	display: none;
+}
+
+.clearOnDesktop{
+	clear: both;
+	display: block;
+}
+
 /* Projects section 2 columns */
 @media only screen and (max-width: 1264px) {
+
 	.box {
 		width: 50% !important;
 	}
 
-
-	.movieKiosk{
-		width: 300px !important;
-		height: 150px !important;
-		margin-bottom: 0px !important;
+	.project-image, .bankapp{
+		width: 250px !important;
 	}
+
+	.clearOniPadPro{
+		display: block !important;
+		clear: both;
+	}
+
+	.clearOnDesktop{
+		clear: none;
+	}
+
 }
 
 /* Laptop */
@@ -475,18 +492,26 @@ input[type="submit"]:hover{
 	margin-top: 50px;
 }
 
-.movieKiosk{
-	width: 400px;
-	height: 225px;
-	margin-bottom: 25px;
+.project-image{
+	width: 275px;
+	height: 250px;
 	border: 2px solid #4a88ba;
 	transition: transform .5s;
 	transition: .5s ease;
 }
 
-.project-image{
-	width: 275px;
-	height: 250px;
+.bankapp{
+	width: 325px;
+	border: 1px solid #4a88ba;
+	transition: transform .5s;
+	transition: .5s ease;
+}
+
+.movieKiosk{
+	width: 400px;
+	height: 225px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	border: 2px solid #4a88ba;
 	transition: transform .5s;
 	transition: .5s ease;
@@ -504,7 +529,7 @@ input[type="submit"]:hover{
 	margin-right: 25px;
 }
 
-.project-image:hover, .movieKiosk:hover, .project-image-java:hover {
+.project-image:hover, .movieKiosk:hover, .project-image-java:hover, .bankapp:hover {
     -ms-transform: scale(1.5); /* IE 9 */
     -webkit-transform: scale(1.5); /* Safari 3-8 */
     transform: scale(1.5); 
@@ -923,6 +948,14 @@ hr.style14 {
 
 	input[type="submit"] {
 		margin-left: 35px;
+	}
+
+
+	.movieKiosk{
+		width: 250px !important;
+		height: 125px !important;
+		margin-bottom: 0px !important;
+		margin-top: 0px !important;
 	}
 }
 
