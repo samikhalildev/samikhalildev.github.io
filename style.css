@@ -249,9 +249,9 @@ input[type="submit"]:hover{
 		display: block !important;
 		clear: both;
 	}
-
-	.clearOnDesktop{
-		clear: none;
+	
+	.container{
+		margin-left: 0px !important;
 	}
 
 }
@@ -267,6 +267,7 @@ input[type="submit"]:hover{
 	    transform: scale(1.4); 
 
 	}
+
 
 	.top-arrow{
 		margin-top: -35px !important;
@@ -468,7 +469,6 @@ input[type="submit"]:hover{
 }
 
 .project-container{
-	max-width: 70%;
 }
 
 .black{
@@ -608,6 +608,9 @@ input[type="submit"]:hover{
 
 .hide-heading{
 	opacity: 0.0;
+}
+
+.eventhub{
 }
 
 .heading-project{
