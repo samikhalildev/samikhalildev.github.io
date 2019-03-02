@@ -63,6 +63,13 @@
             padding: 7px;
         }
 
+        .title-date {
+            float:right;
+            font-size: 15px;
+            font-weight: normal;
+            margin-top: 3px;
+        }
+
         .project-buttons {
             text-align: right;
             padding: 25px;
@@ -116,7 +123,7 @@
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
-          <p class="text-white-75 font-weight-light mb-5">A passionate developer who loves turning ideas into reality.</p>
+          <p class="text-white-75 font-weight-light mb-5">A passionate developer who loves making ideas reality.</p>
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Read More</a>
         </div>
       </div>
@@ -130,8 +137,8 @@
         <div class="about-me col-lg-8 text-center">
           <h2 class="text-white mt-0">About Me</h2>
           <hr class="divider light my-4">
-            <p class="text-white-75 mb-4">It all started when I was a young kid with love and passion for computers. <br><br> After high school, I decided I wanted to build software and pursue computing as a career because I love the aspect of problem solving, I can come up with a world changing idea and have it used by millions of people. It is what makes me want to get up in the morning ! </p>
-            <p class="text-white-75 mb-4">I have been programming for about 3 years now and it is been great. I still feel like I am a beginner because there is just so much you can learn. <br><br> I am planning to get into React Native to build cross-platform mobile apps, build projects with Raspberry Pis such as a self-navigating robot or a home automation system. <br> <br> When I am not cooking software, I like to hang out with friends, go to the beach, check out dank memes or listen to tech talks. <br><br> Below I have listed some languages, frameworks and tools that I use frequently. <br><br> <i>  HTML5, CSS/SASS, JavaScript, React, Node.js, Python, Java, C# <br> Git, CLI, XHR, JSON, APIs </i></p>
+            <p class="text-white-75 mb-4">It all started when I was a young kid with love and passion for computers. <br><br> After high school, I decided to pursue computing as a career because I wanted to build software that solves problems and see it used by millions of people. </p>
+            <p class="text-white-75 mb-4">I have been programming for about 3 years now and it is been great! I still feel like a beginner because there is just so much you can learn. <br><br> The fields that I have interest in are Web, Mobile, IoT, AI and Robotics. <br> <br>I am planning to get into React Native to build cross-platform mobile apps, use Raspberry Pis to build a self-navigating robot or a home automation system. <br> <br> When I am not programming, I like to hang out with friends, check out dank memes or listen to tech talks. <br><br> Below I have listed some languages, frameworks and tools that I use frequently. <br><br> <i>  HTML5, CSS/SASS, JavaScript, React, Redux, Node.js, Python, Java, C# <br> Git, CLI, XHR, JSON, APIs </i></p>
             <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">My Projects</a>
         </div>
       </div>
@@ -151,7 +158,11 @@
                 <a class="item-preview-img box-shadow-lg d-block mb-3">
                     <img class="img-fluid" src="img/projects/Xoogley.png">
                 </a>
-                <div class="item-preview-title">Xoogley</div>
+
+                <div class="item-preview-title">Xoogley
+                    <span class="title-date"> 1 week </span>
+                </div>
+
                 <div class="item-preview-description">A browser extension for the web. It replaces all new tabs with a custom interface and changes how Google search page looks.
                 </div>
                 <div class="project-buttons">
@@ -167,7 +178,11 @@
                   <a class="item-preview-img box-shadow-lg d-block mb-3">
                       <img class="img-fluid" src="img/projects/Eventhub.png">
                   </a>
-                  <div class="item-preview-title">EventHub</div>
+
+                  <div class="item-preview-title">EventHub
+                      <span class="title-date"> 2-4 weeks</span>
+                  </div>
+
                   <div class="item-preview-description">A modern web-based application that helps video producers and event creators to manage their work in a new and systematic way.</div>
                   <div class="project-button-no-padding">
                       <div class="text-left">
@@ -185,7 +200,11 @@
                   <a class="item-preview-img box-shadow-lg d-block mb-3">
                       <img class="img-fluid" src="img/projects/MERNQuick.png">
                   </a>
-                  <div class="item-preview-title">MERNQuick</div>
+
+                  <div class="item-preview-title">MERNQuick
+                      <span class="title-date"> 2 weeks</span>
+                  </div>
+
                   <div class="item-preview-description">A boilerplate setup for building powerful full stack JavaScript applications using the MERN stack.</div>
                   <div class="project-buttons">
                       <a class="btn btn-secondary btn-sm" target="_blank" href="https://github.com/samikhalildev/MERNQuick">Code and Docs</a>
@@ -234,8 +253,8 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/creative.min.js"></script>
-  <script>
 
+  <script>
       var slideUp = {
           distance: '25%',
           origin: 'bottom',
@@ -256,7 +275,6 @@
 
       slideUp['origin'] = 'top';
       ScrollReveal().reveal('#mainNav', slideUp);
-
   </script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
