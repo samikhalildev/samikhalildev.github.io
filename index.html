@@ -1,342 +1,1358 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon_io/site.webmanifest">
-
-  <title> Sami's Portfolio</title>
-
-  <!-- Font Awesome Icons -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
-
-  <!-- Plugin CSS -->
-  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
-  <!-- Theme CSS - Includes Bootstrap -->
-  <link href="css/creative.min.css" rel="stylesheet">
-
-    <script src="https://unpkg.com/scrollreveal"></script>
-
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sami Khalil | Software Engineer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfolio of Sami Khalil, Senior Software Engineer specialising in frontend, cloud, and AI-driven solutions."
+    />
     <style>
+      :root {
+        --bg: #e5e7eb;
+        --bg-alt: #ffffff;
+        --accent: #2563eb;
+        --accent-soft: #eff4ff;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+        --border: #e5e7eb;
+        --radius-lg: 18px;
+        --radius-md: 10px;
+        --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.06);
+      }
 
-        .header-bg {
-            background-image: linear-gradient(-155deg,#564dab, #a93db9, #f56e61);
-        }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-        .item-preview {
-            position: relative;
-        }
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background: var(--bg);
+        color: var(--text-main);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+      }
 
-        .item-preview a.item-preview-img {
-            transition: .15s box-shadow,.15s transform;
-            border-radius: .5rem;
-            box-shadow: 0 2rem 1.5rem -1.5rem rgba(33,37,41,.15), 0 0 1.5rem 0.5rem rgba(33,37,41,.05);
-            overflow: hidden;
-        }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
 
-        .item-preview a.item-preview-img:hover {
-            transform: translateY(-0.25rem);
-            box-shadow: 0 2.25rem 1.5rem -1.5rem rgba(33,37,41,.3),0 0 1.5rem .5rem rgba(33,37,41,.05)!important;
-        }
+      ul {
+        list-style: none;
+      }
 
-        .item-preview .item-preview-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            padding: 5px;
-        }
+      .page {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        padding: 1.5rem;
+      }
 
-        .item-preview .item-preview-description {
-            font-size: .8rem;
-            color: rgba(33,37,41,.7);
-            padding: 7px;
+      @media (max-width: 840px) {
+        .page {
+          padding: 1rem;
         }
+      }
 
-        .title-date {
-            float:right;
-            font-size: 15px;
-            font-weight: normal;
-            margin-top: 3px;
-            margin-right: 10px;
-        }
+      .shell {
+        max-width: 1100px;
+        width: 100%;
+        background: var(--bg-alt);
+        border-radius: 24px;
+        box-shadow: var(--shadow-soft);
+        padding: 1.4rem 1.6rem 1.7rem;
+        border: 1px solid #e5e7eb;
+      }
 
-        .project-buttons {
-            text-align: right;
-            padding: 25px 10px 25px 25px;
+      @media (max-width: 720px) {
+        .shell {
+          padding: 1.1rem 1.1rem 1.4rem;
+          border-radius: 20px;
         }
+      }
 
-        .project-button-no-padding {
-            text-align: right;
-            padding-right: 10px;
-        }
+      /* HEADER */
 
-        .project-buttons a, .project-button-no-padding a {
-            margin-top: 10px;
-            padding: 8px 20px;
-            margin-left: 5px;
-        }
-        .covnet {
-          width: 550px;
-        }
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.2rem;
+        margin-bottom: 1.4rem;
+        border-bottom: 1px solid #d1d5db;
+        padding: 0.7rem 0.9rem 0.9rem;
+        border-radius: 18px;
+        background: #f7f7f7; /* slightly darker header strip */
+      }
 
-        .remotelearning {
-          height: 305px;
+      @media (max-width: 840px) {
+        .site-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.8rem;
         }
+      }
+
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+      }
+
+      .avatar {
+        width: 125px; /* or whatever size you had */
+        height: 125px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-image: url("img/me.png");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* ensures the image fills the circle */
+        display: block;
+      }
+
+      .header-text {
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+      }
+
+      .header-name {
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+
+      .header-role {
+        font-size: 0.88rem;
+        color: var(--text-muted);
+      }
+
+      .header-location {
+        font-size: 0.8rem;
+        color: #9ca3af;
+      }
+
+      .tag-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        padding: 0.22rem 0.6rem;
+        border-radius: 999px;
+        border: 1px solid #d1d5db;
+        font-size: 0.74rem;
+        color: #4b5563;
+        background: #f9fafb;
+        width: fit-content;
+        margin-top: 0.15rem;
+      }
+
+      .tag-pill-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: #22c55e;
+      }
+
+      .header-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.5rem;
+      }
+
+      @media (max-width: 840px) {
+        .header-right {
+          align-items: flex-start;
+          width: 100%;
+        }
+      }
+
+      .header-contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+      }
+
+      .header-contact a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        padding: 0.18rem 0.55rem;
+        border-radius: 999px;
+        border: 1px solid #e5e7eb;
+        background: #f9fafb;
+        color: #374151;
+      }
+
+      .header-contact a.primary {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #ffffff;
+      }
+
+      .header-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        font-size: 0.83rem;
+      }
+
+      .header-nav a {
+        color: #4b5563;
+      }
+
+      .header-nav a:hover {
+        color: #111827;
+      }
+
+      /* MAIN CONTENT */
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 0.3rem;
+      }
+
+      .section {
+        background: #ffffff;
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border);
+        padding: 1.3rem 1.4rem;
+      }
+
+      @media (max-width: 720px) {
+        .section {
+          padding: 1.1rem 1.1rem;
+          border-radius: 14px;
+        }
+      }
+
+      .section-header {
+        margin-bottom: 0.65rem;
+      }
+
+      .section-title {
+        font-size: 0.88rem;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--text-muted);
+      }
+
+      .section-body {
+        font-size: 0.9rem;
+        color: var(--text-main);
+      }
+
+      .section-body p + p {
+        margin-top: 0.6rem;
+      }
+
+      /* SUMMARY */
+
+      .hero-summary {
+        display: grid;
+        grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.5fr);
+        gap: 1.3rem;
+        align-items: flex-start;
+      }
+
+      @media (max-width: 880px) {
+        .hero-summary {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+
+      .summary-text p {
+        font-size: 0.95rem;
+        color: var(--text-main);
+      }
+
+      .summary-text p strong {
+        font-weight: 600;
+      }
+
+      .summary-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 1rem;
+      }
+
+      .summary-tag {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: #1f2937;
+        border: 1px solid #dbe5ff;
+      }
+
+      .summary-highlight {
+        font-size: 0.82rem;
+        background: #f9fafb;
+        border-radius: var(--radius-md);
+        padding: 0.6rem 0.7rem;
+        border: 1px dashed #d1d5db;
+        color: var(--text-muted);
+      }
+
+      .summary-highlight ul {
+        margin-top: 0.2rem;
+        padding-left: 1rem;
+        list-style: disc;
+      }
+
+      .summary-highlight li + li {
+        margin-top: 0.15rem;
+      }
+
+      /* EXPERIENCE */
+
+      .experience-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .exp-item {
+        border-radius: var(--radius-md);
+        padding: 0.8rem 0.9rem;
+        border: 1px solid #e5e7eb;
+        background: #fcfcfd;
+      }
+
+      .exp-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5rem;
+        align-items: baseline;
+        margin-bottom: 0.1rem;
+      }
+
+      .exp-role {
+        font-weight: 600;
+        font-size: 0.93rem;
+      }
+
+      .exp-company {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+      }
+
+      .exp-dates {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        white-space: nowrap;
+      }
+
+      @media (max-width: 600px) {
+        .exp-header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .exp-dates {
+          white-space: normal;
+        }
+      }
+
+      .exp-tags {
+        margin: 0.45rem 0 0.25rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        font-size: 0.75rem;
+      }
+
+      .exp-tags span {
+        background: #eef2ff;
+        color: #3730a3;
+        padding: 0.18rem 0.45rem;
+        border-radius: 999px;
+      }
+
+      .exp-body {
+        margin-top: 0.2rem;
+        font-size: 0.86rem;
+        color: var(--text-main);
+      }
+
+      .exp-body ul {
+        list-style: disc;
+        padding-left: 1.1rem;
+        margin-top: 0.25rem;
+        display: grid;
+        gap: 0.18rem;
+      }
+
+      /* SKILLS */
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem;
+      }
+
+      @media (max-width: 720px) {
+        .skills-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+
+      .skill-block {
+        border-radius: var(--radius-md);
+        border: 1px solid #e5e7eb;
+        padding: 0.8rem 0.9rem;
+        background: #fcfcfd;
+        font-size: 0.88rem;
+      }
+
+      .skill-block-title {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--text-muted);
+        margin-bottom: 0.4rem;
+      }
+
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+      }
+
+      .skill-tags span {
+        font-size: 0.8rem;
+        padding: 0.22rem 0.5rem;
+        border-radius: 999px;
+        background: #f3f4f6;
+        color: #374151;
+      }
+
+      /* PROJECTS */
+
+      .project-list {
+        display: grid;
+        grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.3fr);
+        gap: 0.9rem;
+      }
+
+      @media (max-width: 720px) {
+        .project-list {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+
+      .project-image {
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 0.6rem;
+        border: 1px solid #e5e7eb;
+        background: #f9fafb;
+      }
+
+      .project-image img {
+        width: 100%;
+        height: 260px;
+        object-fit: contain; /* show full image */
+        display: block;
+      }
+
+      .project-links {
+        margin-top: auto; /* pushes buttons to bottom */
+        padding-top: 1rem; /* spacing above buttons */
+        display: flex;
+        gap: 0.6rem;
+      }
+
+      .project-year {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        margin-top: -4px;
+        margin-bottom: 6px;
+      }
+
+      .project-links a {
+        font-size: 0.9rem;
+        padding: 0.45rem 0.9rem;
+        border-radius: 8px;
+        border: 1px solid #d1d5db;
+        background: #f3f4f6;
+        color: #111827;
+        font-weight: 500;
+      }
+
+      .project-links a.primary {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #ffffff;
+      }
+
+      .project-links a.primary {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #ffffff;
+      }
+
+      .project-title-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+
+      .project-title {
+        font-weight: 600;
+        font-size: 1rem;
+      }
+
+      .project-year {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        white-space: nowrap;
+      }
+
+      .project-item {
+        border-radius: var(--radius-md);
+        border: 1px solid #e5e7eb;
+        padding: 0.9rem;
+        background: #fcfcfd;
+        font-size: 0.88rem;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .project-title {
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+
+      .project-meta {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        margin-bottom: 0.35rem;
+      }
+
+      .project-stack {
+        font-size: 0.78rem;
+        color: #4b5563;
+        margin-top: 0.4rem;
+      }
+
+      /* CONTACT */
+
+      .edu-item {
+        font-size: 0.88rem;
+      }
+
+      .edu-title {
+        font-weight: 600;
+      }
+
+      .edu-meta {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        margin-bottom: 0.3rem;
+      }
+
+      .contact-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        font-size: 0.85rem;
+        margin-top: 0.4rem;
+      }
+
+      .contact-links a {
+        border-radius: 999px;
+        border: 1px solid #d1d5db;
+        padding: 0.25rem 0.6rem;
+        background: #f9fafb;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        color: #374151;
+      }
+
+      .contact-links a.primary {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #ffffff;
+      }
+
+      .contact-links a.primary:hover {
+        filter: brightness(0.95);
+      }
+
+      .footer {
+        text-align: center;
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        margin-top: 1.4rem;
+        width: 100%;
+      }
     </style>
-</head>
-
-<body id="page-top">
-
-  <!-- Nav -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">SAMI KHALIL</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto my-2 my-lg-0">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Landing -->
-  <header class="masthead" id="landing">
-    <div class="container h-100">
-      <div class="row h-100 align-items-center justify-content-center text-center">
-        <div class="col-lg-10 align-self-end">
-          <h1 class="text-uppercase text-white font-weight-bold">Sami Khalil</h1>
-          <hr style="margin-top:15px !important; margin-bottom: 15px !important;" class="divider my-4">
-        </div>
-        <div class="col-lg-8 align-self-baseline">
-          <p class="text-white-75 font-weight-light mb-5">Software engineer, technology enthusiast </p>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Read More</a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- About -->
-  <section class="page-section header-bg" id="about">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="about-me col-lg-8 text-center">
-          <h2 class="text-white mt-0">About Me</h2>
-          <hr class="divider light my-4">
-            <p class="text-white-75 mb-4">I have always been passionate about computers and programming. After high school, I decided I wanted to pursue computing because I was interested in solving real world problems using code.</p>
-            <p class="text-white-75 mb-4"> My current interests are in web technologies, Internet of Things and Artificial Intelligence. <br><br> Some of the languages, frameworks and tools that I use frequently: <br><i style="font-size: 13px;">  HTML5, CSS/SASS, JavaScript, React, React Native, Redux, Node.js, Python, Java <br> SQL, NoSQL, Git, CLI, XHR, JSON, APIs, Keras </i></p>
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">My Projects</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section class="page-section" id="services">
-    <div class="container projects">
-      <h2 class="text-center mt-0">Projects</h2>
-      <hr class="divider my-4">
-      <div class="row">
- 
-      <div class="col-md-6">
-          <div class="item-preview mb-5">
-              <a class="item-preview-img box-shadow-lg d-block mb-3">
-                  <img class="img-fluid " src="img/projects/r1.png">
-              </a>
-
-              <div class="item-preview-title">Remote Learning
-                  <span class="title-date"> 2 weeks </span>
+  </head>
+  <body>
+    <div class="page">
+      <div class="shell">
+        <!-- HEADER -->
+        <header class="site-header">
+          <div class="header-left">
+            <div class="avatar" oncontextmenu="return false;"></div>
+            <div class="header-text">
+              <div class="header-name">Sami Khalil</div>
+              <div class="header-role">Senior Software Engineer</div>
+              <div class="header-location">Sydney, Australia</div>
+              <div class="tag-pill">
+                <span class="tag-pill-dot"></span>
+                <span>Available to new opportunities local or remote</span>
               </div>
-
-              <div class="item-preview-description">An interactive platform for schools, university or anyone. Users can create rooms, invite and challenge others in real-time. Built using WebRTC, Websockets, React and Node.js
-              </div>
-              <div class="project-buttons">
-                  <a class="btn btn-primary btn-sm" target="_blank" href="https://remotelearning.herokuapp.com">App</a>
-              </div>
-          </div>
-      </div>
-
-      <div class="col-md-6">
-          <div class="item-preview mb-5">
-              <a class="item-preview-img box-shadow-lg d-block mb-3">
-                  <img class="img-fluid " src="img/projects/covnet.png">
-              </a>
-
-              <div class="item-preview-title">Covnet
-                  <span class="title-date"> 2 weeks </span>
-              </div>
-
-              <div class="item-preview-description">Covnet is an anonymously contact tracing system. It informs you if you have been in close contact with another user who have been diagnosed with the virus to help you get tested early and self-isolate to avoid further spread. Built using React Native, Node.js and Mongodb
-              </div>
-              <div class="project-buttons">
-                  <a class="btn btn-primary btn-sm" target="_blank" href="https://covnet.herokuapp.com/">App</a>
-                  <a style="text-align: right;" target="_blank" class="btn btn-secondary btn-sm" href="https://github.com/samikhalildev/COVNET">Source Code</a>
-              </div>
-          </div>
-      </div>
-
-      <div class="col-md-6">
-          <div class="item-preview mb-5">
-              <a class="item-preview-img box-shadow-lg d-block mb-3">
-                  <img class="img-fluid" src="img/projects/cord.png">
-              </a>
-
-              <div class="item-preview-title">Coronavirus Research Engine
-                  <span class="title-date"> 5 days </span>
-              </div>
-
-              <div class="item-preview-description"> A search engine that responds to querys and returns the most relevant articles long with a summary of the main points. Made for CORD-19 challenge. Built using React and Python
-              </div>
-              <div style="margin-top: 20px;" class="project-buttons">
-                  <a class="btn btn-primary btn-sm" target="_blank" href="https://coronavirus-research.herokuapp.com/">App</a>
-                  <a style="text-align: right;" target="_blank" class="btn btn-secondary btn-sm" href="https://github.com/samikhalildev/COVID-19-Research-Engine">Source Code</a>
-              </div>
-          </div>
-      </div>
-
-        <!-- Fire detection system -->
-        <div class="col-md-6">
-            <div class="item-preview mb-5">
-                <a class="item-preview-img box-shadow-lg d-block mb-3">
-                    <img class="img-fluid" src="img/projects/robot.png">
-                </a>
-
-                <div class="item-preview-title"> Pepper - The Shopping Assistant
-                    <span class="title-date"> 3 months </span>
-                </div>
-
-                <div class="item-preview-description">The goal of this project was to create an intelligent robotic application to help customers find products while shopping using voice, touch and vision. Various machine learning and AI technologies were used to develop this prototype.
-                </div>
-                <div class="project-buttons">
-                    <a style="text-align: right;" target="_blank" class="btn btn-secondary btn-sm" href="https://github.com/samikhalildev/Roboticists">Source Code</a>
-                </div>
             </div>
-        </div>
+          </div>
 
-         <!-- Fire detection system -->
-         <div class="col-md-6">
-            <div class="item-preview mb-5">
-                <a class="item-preview-img box-shadow-lg d-block mb-3">
-                    <img class="img-fluid" src="img/projects/fire-warning-system.png">
-                </a>
-
-                <div class="item-preview-title">Smart Fire Detection System
-                    <span class="title-date"> 1 month </span>
-                </div>
-
-                <div class="item-preview-description">This system is able to detect and monitor environmental parameters such as temperature/humidity changes and generate alarms/alerts when these parameters go above a predetermined threshold.
-                </div>
-                <div class="project-buttons">
-                    <a style="text-align: right;" target="_blank" class="btn btn-secondary btn-sm" href="https://github.com/samikhalildev/IOT-Fire-Warning-System">Source Code</a>
-                </div>
+          <div class="header-right">
+            <div class="header-contact">
+              <a href="mailto:sami.khalil.dev@gmail.com" class="primary"
+                >📧 Email</a
+              >
+              <a href="tel:+61478058151">📱 Call / SMS</a>
+              <a
+                href="https://linkedin.com/in/samikhalildev"
+                target="_blank"
+                rel="noreferrer"
+                >🔗 LinkedIn</a
+              >
             </div>
-        </div>
+            <br />
+            <nav class="header-nav">
+              <a href="#profile">Profile</a>
+              <a href="#interests">Interests</a>
+              <a href="#skills">Skills</a>
+              <a href="#experience">Experience</a>
+              <a href="#projects">Projects</a>
+              <a href="#contact">Contact</a>
+            </nav>
+          </div>
+        </header>
 
+        <!-- MAIN -->
+        <main class="main">
+          <!-- SUMMARY -->
+          <section class="section" id="profile">
+            <div class="hero-summary">
+              <div class="summary-text">
+                <div class="section-header">
+                  <h2 class="section-title">Profile</h2>
+                </div>
+                <p>
+                  I’m a software engineer who enjoys solving
+                  <strong>complex problems</strong> and turning ideas into
+                  <strong>clear, reliable products</strong>. I focus on writing
+                  <strong>efficient code</strong>, designing
+                  <strong>maintainable systems</strong>, and building things
+                  that are <strong>easy to use</strong>.
+                </p>
+                <br />
+                <p>
+                  Over the years, I’ve worked across different parts of the
+                  stack and picked up experience in <strong>frontend</strong>,
+                  <strong>backend</strong>, <strong>cloud</strong>, and even
+                  <strong>deep learning</strong>. <br />I like understanding how
+                  everything fits together, how <strong>data flows</strong>, how
+                  <strong>systems behave</strong>, and how
+                  <strong>UX decisions</strong>
+                  shape the overall experience.
+                </p>
+
+                <div class="summary-tags">
+                  <span class="summary-tag">Product-focused engineering</span>
+                  <span class="summary-tag">React & TypeScript</span>
+                  <span class="summary-tag">AWS</span>
+                  <span class="summary-tag">AI / deep learning</span>
+                </div>
+              </div>
+
+              <div class="summary-highlight">
+                <strong>What I’m good at:</strong>
+                <ul>
+                  <li>
+                    Breaking down complex problems into something people can
+                    actually use.
+                  </li>
+                  <li>
+                    Working across product, design, and engineering to get
+                    things built the right way.
+                  </li>
+                  <li>
+                    Making sense of vague ideas and turning them into features
+                    that are clear and practical.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="section" id="interests">
+            <div class="section-header">
+              <h2 class="section-title">Interests</h2>
+            </div>
+
+            <div class="section-body" style="font-size: 0.9rem">
+              <p style="margin-top: 0.6rem">
+                I’m interested in how <strong>AI</strong> can be used in
+                practical and meaningful ways. I spend time exploring new tools
+                and techniques in the space. I enjoy building
+                <strong>side projects</strong> and automating things I find
+                repetitive. A lot of my tinkering has been with AI and
+                experimenting with different models.
+              </p>
+
+              <p style="margin-top: 0.6rem">
+                Personally, I enjoy reading about
+                <strong>technology, startups </strong>and something a bit
+                different: <strong>Ancient Syriac</strong>.
+                <br />
+                I like finding ways to improve each day, whether that’s better
+                code, better habits, or taking time to reflect on what matters
+                the <strong>most ♱</strong>
+              </p>
+            </div>
+          </section>
+
+          <!-- SKILLS -->
+          <section class="section" id="skills">
+            <div class="section-header">
+              <h2 class="section-title">Stacks {}</h2>
+            </div>
+            <div class="skills-grid">
+              <div class="skill-block">
+                <div class="skill-block-title">Languages</div>
+                <div class="skill-tags">
+                  <span>JavaScript (ES6+)</span>
+                  <span>TypeScript</span>
+                  <span>Python</span>
+                </div>
+              </div>
+
+              <div class="skill-block">
+                <div class="skill-block-title">Frontend</div>
+                <div class="skill-tags">
+                  <span>React</span>
+                  <span>Redux</span>
+                  <span>React Native</span>
+                  <span>HTML5</span>
+                  <span>CSS3</span>
+                  <span>Tailwind CSS</span>
+                  <span>Bootstrap</span>
+                </div>
+              </div>
+
+              <div class="skill-block">
+                <div class="skill-block-title">Backend</div>
+                <div class="skill-tags">
+                  <span>Node.js</span>
+                  <span>Express</span>
+                  <span>Python</span>
+                  <span>Flask</span>
+                  <span>REST APIs</span>
+                  <span>Serverless functions</span>
+                </div>
+              </div>
+
+              <div class="skill-block">
+                <div class="skill-block-title">Databases</div>
+                <div class="skill-tags">
+                  <span>PostgreSQL</span>
+                  <span>DynamoDB</span>
+                  <span>MongoDB</span>
+                  <span>NoSQL</span>
+                  <span>Redis (caching)</span>
+                </div>
+              </div>
+
+              <div class="skill-block">
+                <div class="skill-block-title">Machine Learning & AI</div>
+                <div class="skill-tags">
+                  <span>TensorFlow</span>
+                  <span>Keras</span>
+                  <span>scikit-learn</span>
+                  <span>CNNs / RNNs</span>
+                  <span>Autoencoders</span>
+                  <span>Transformers</span>
+                  <span>Training & inference pipelines</span>
+                </div>
+              </div>
+
+              <div class="skill-block">
+                <div class="skill-block-title">Cloud & DevOps</div>
+                <div class="skill-tags">
+                  <span>AWS ECS</span>
+                  <span>AWS Lambda</span>
+                  <span>S3</span>
+                  <span>SNS / SQS</span>
+                  <span>CloudWatch</span>
+                  <span>API Gateway</span>
+                  <span>Docker</span>
+                  <span>CI/CD</span>
+                  <span>Netlify</span>
+                  <span>Heroku</span>
+                  <span>Bamboo</span>
+                </div>
+              </div>
+
+              <div class="skill-block">
+                <div class="skill-block-title">Testing</div>
+                <div class="skill-tags">
+                  <span>Jest</span>
+                  <span>React Testing Library</span>
+                  <span>Mocha</span>
+                  <span>Enzyme</span>
+                  <span>Postman</span>
+                </div>
+              </div>
+
+              <div class="skill-block">
+                <div class="skill-block-title">Collaboration</div>
+                <div class="skill-tags">
+                  <span>Git</span>
+                  <span>Bitbucket</span>
+                  <span>GitHub</span>
+                  <span>Jira</span>
+                  <span>Confluence</span>
+                  <span>Figma</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- EXPERIENCE -->
+          <section class="section" id="experience">
+            <div class="section-header">
+              <h2 class="section-title">Work Experience</h2>
+            </div>
+            <div class="experience-list">
+              <!-- Westpac 2024 -->
+              <article class="exp-item">
+                <div class="exp-header">
+                  <div>
+                    <div class="exp-role">
+                      Senior Software Engineer (Contract)
+                    </div>
+                    <div class="exp-company">Westpac · Sydney, Australia</div>
+                  </div>
+                  <div class="exp-dates">Nov 2024 – Nov 2025</div>
+                </div>
+                <div class="exp-tags">
+                  <span>React</span><span>TypeScript</span><span>Banking</span
+                  ><span>Security</span>
+                </div>
+                <div class="exp-body">
+                  <ul>
+                    <li>
+                      Led the design and delivery of secure, customer-facing
+                      banking products that improved self-service and reduced
+                      operational burden.
+                    </li>
+                    <li>
+                      Built end-to-end flows for additional cardholders and
+                      card-limit management, covering frontend, backend
+                      integration, and release management.
+                    </li>
+                    <li>
+                      Produced clean, modular React/TypeScript code with strong
+                      test coverage to support reliable, frequent releases.
+                    </li>
+                    <li>
+                      Resolved 100+ platform security risks via proactive
+                      vulnerability assessment and remediation.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- Neuralhub -->
+              <article class="exp-item">
+                <div class="exp-header">
+                  <div>
+                    <div class="exp-role">Software Developer</div>
+                    <div class="exp-company">
+                      Neuralhub.ai (Startup) · Remote
+                    </div>
+                  </div>
+                  <div class="exp-dates">Jul 2023 – Sep 2024</div>
+                </div>
+                <div class="exp-tags">
+                  <span>React</span><span>Node.js</span><span>Python</span
+                  ><span>AWS</span><span>Deep Learning</span>
+                </div>
+                <div class="exp-body">
+                  <ul>
+                    <li>
+                      Built a no-code AI platform with a visual interface for
+                      designing, configuring, and deploying neural networks
+                      without writing code.
+                    </li>
+                    <li>
+                      Implemented Node.js and Python services for training
+                      orchestration, workload scheduling, and automated
+                      inference.
+                    </li>
+                    <li>
+                      Engineered AWS-based solutions using ECS, Lambda, S3,
+                      SNS/SQS to support scalable AI workloads.
+                    </li>
+                    <li>
+                      Reduced compute costs by ~90% via workload optimisation
+                      and dynamic resource allocation strategies.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- Westpac 2021 -->
+              <article class="exp-item">
+                <div class="exp-header">
+                  <div>
+                    <div class="exp-role">
+                      Senior Software Engineer (Contract)
+                    </div>
+                    <div class="exp-company">Westpac · Sydney, Australia</div>
+                  </div>
+                  <div class="exp-dates">Dec 2021 – Jul 2023</div>
+                </div>
+                <div class="exp-tags">
+                  <span>React</span><span>Node.js</span
+                  ><span>Microservices</span><span>Lending</span>
+                </div>
+                <div class="exp-body">
+                  <ul>
+                    <li>
+                      Delivered microservice-driven digital lending services for
+                      business banking, improving data accuracy and reducing
+                      manual processing.
+                    </li>
+                    <li>
+                      Refactored monolithic components into a modular,
+                      service-oriented architecture for better scalability and
+                      maintainability.
+                    </li>
+                    <li>
+                      Improved delivery speed by ~30% through test automation
+                      and CI/CD enhancements.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- Deloitte -->
+              <article class="exp-item">
+                <div class="exp-header">
+                  <div>
+                    <div class="exp-role">Software Developer</div>
+                    <div class="exp-company">Deloitte · Sydney, Australia</div>
+                  </div>
+                  <div class="exp-dates">Mar 2021 – Dec 2021</div>
+                </div>
+                <div class="exp-tags">
+                  <span>React</span><span>Node.js</span><span>Payments</span
+                  ><span>Consulting</span>
+                </div>
+                <div class="exp-body">
+                  <ul>
+                    <li>
+                      Developed and integrated a multi-merchant payment gateway
+                      for Perth Airport retail, improving transaction
+                      reliability and customer experience.
+                    </li>
+                    <li>
+                      Led the build of an interactive web application for Sydney
+                      WorldPride 2023, working closely with stakeholders under
+                      tight timelines.
+                    </li>
+                    <li>
+                      Mentored junior developers, reducing onboarding time by
+                      ~30% through guidance and standards.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- LT Network -->
+              <article class="exp-item">
+                <div class="exp-header">
+                  <div>
+                    <div class="exp-role">Full-Stack Developer (Contract)</div>
+                    <div class="exp-company">LT Network · Remote</div>
+                  </div>
+                  <div class="exp-dates">Aug 2020 – Mar 2021</div>
+                </div>
+                <div class="exp-tags">
+                  <span>React</span><span>Node.js</span><span>NoSQL</span>
+                </div>
+                <div class="exp-body">
+                  <ul>
+                    <li>
+                      Delivered key platform components for a national
+                      lead-generation system, enabling franchises to quickly
+                      launch branded landing pages.
+                    </li>
+                    <li>
+                      Built a drag-and-drop template builder that reduced manual
+                      design work and improved marketing efficiency.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- NBCF -->
+              <article class="exp-item">
+                <div class="exp-header">
+                  <div>
+                    <div class="exp-role">Junior Front-End Developer</div>
+                    <div class="exp-company">
+                      National Breast Cancer Foundation · Sydney, Australia
+                    </div>
+                  </div>
+                  <div class="exp-dates">Dec 2017 – Feb 2019</div>
+                </div>
+                <div class="exp-tags">
+                  <span>HTML/CSS</span><span>JavaScript</span
+                  ><span>WordPress</span>
+                </div>
+                <div class="exp-body">
+                  <ul>
+                    <li>
+                      Built responsive landing pages and campaign assets to
+                      support nationwide fundraising initiatives.
+                    </li>
+                    <li>
+                      Contributed to a full redesign of the NBCF website,
+                      improving usability and engagement.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="section" id="projects">
+            <div class="section-header">
+              <h2 class="section-title">A few Projects</h2>
+            </div>
+
+            <div class="project-list">
+              <!-- Neuralhub -->
+              <article class="project-item">
+                <div class="project-image">
+                  <img
+                    src="img/projects/neuralhub1.png"
+                    alt="Neuralhub no-code deep learning studio"
+                  />
+                </div>
+
+                <div class="project-title-row">
+                  <div class="project-title">
+                    Neuralhub: No-Code Deep Learning Studio
+                  </div>
+                  <div class="project-year">2023</div>
+                </div>
+                <div class="project-meta">Personal startup</div>
+
+                <p>
+                  Neuralhub is a no-code studio for designing, training, and
+                  deploying deep learning models without touching Python scripts
+                  or notebooks. It allows users to visually assemble
+                  architectures, configure hyperparameters, upload datasets,
+                  launch training jobs, and inspect results — all through an
+                  intuitive interface.
+                </p>
+                <br />
+                <div class="project-stack">
+                  ⚙️ React · TypeScript · Node.js · Python · AWS · TensorFlow
+                  <br />
+                  ✅ 400+ early-access signups · 🚀 Launched beta
+                </div>
+
+                <p style="font-size: 11px">
+                  Note: Application is running but backend is taken down due to
+                  expensive costs.
+                </p>
+
+                <!-- Optional links (update URLs if you have a live demo) -->
+                <div class="project-links">
+                  <a
+                    href="https://neuralhub.ai/"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="primary"
+                    >Open application</a
+                  >
+                </div>
+              </article>
+
+              <!-- Remote Learning -->
+              <article class="project-item">
+                <div class="project-image">
+                  <img
+                    src="img/projects/r1.png"
+                    alt="Remote Learning platform preview"
+                  />
+                </div>
+                <div class="project-title-row">
+                  <div class="project-title">Remote Learning</div>
+                  <div class="project-year">2020</div>
+                </div>
+
+                <div class="project-meta">
+                  Interactive real-time learning platform
+                </div>
+                <p>
+                  An interactive platform for schools and universities where
+                  users can create rooms, invite others, and challenge each
+                  other in real time using video and shared activities.
+                </p>
+                <p>
+                  Built as a way to explore WebRTC + WebSockets and how
+                  real-time collaboration can feel smooth even over the web.
+                </p>
+                <br />
+
+                <div class="project-stack">
+                  ⚙️ React · Node.js · WebRTC · WebSockets <br />⏱ Built in ~2
+                  weeks
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/RealityThing/RemoteLearning"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Source</a
+                  >
+                </div>
+              </article>
+
+              <!-- Covnet -->
+              <article class="project-item">
+                <div class="project-image">
+                  <img
+                    src="img/projects/covnet.png"
+                    alt="Covnet anonymous contact tracing app"
+                  />
+                </div>
+                <div class="project-title-row">
+                  <div class="project-title">Covnet</div>
+                  <div class="project-year">2020</div>
+                </div>
+
+                <div class="project-meta">Anonymous contact tracing app</div>
+                <p>
+                  A privacy-aware contact tracing system that informs you if
+                  you’ve been in close contact with a diagnosed user — without
+                  exposing identities.
+                </p>
+                <p>
+                  Focused on lightweight UX and anonymous data, built during the
+                  early COVID wave to explore how tech could help without
+                  over-collecting data.
+                </p>
+                <div class="project-stack">
+                  ⚙️ React Native · Node.js · MongoDB <br />⏱ Built in ~2 weeks
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/samikhalildev/COVNET"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Source</a
+                  >
+                </div>
+              </article>
+
+              <!-- Coronavirus Research Engine -->
+              <article class="project-item">
+                <div class="project-image">
+                  <img
+                    src="img/projects/cord.png"
+                    alt="Coronavirus research engine screenshot"
+                  />
+                </div>
+                <div class="project-title-row">
+                  <div class="project-title">Coronavirus Research Engine</div>
+                  <div class="project-year">2020</div>
+                </div>
+
+                <div class="project-meta">
+                  Search engine for COVID-19 research
+                </div>
+                <p>
+                  A search engine that responds to queries with the most
+                  relevant research articles plus a summarised view of the main
+                  points, built for the CORD-19 challenge.
+                </p>
+                <br /><br />
+                <div class="project-stack">
+                  ⚙️ React · Python
+                  <br />
+                  ⏱ Built in ~5 days
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/samikhalildev/COVID-19-Research-Engine"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Source</a
+                  >
+                </div>
+              </article>
+
+              <!-- Pepper - The Shopping Assistant -->
+              <article class="project-item">
+                <div class="project-image">
+                  <img
+                    src="img/projects/robot.png"
+                    alt="Pepper robot shopping assistant"
+                  />
+                </div>
+                <div class="project-title-row">
+                  <div class="project-title">Pepper — Shopping Assistant</div>
+                  <div class="project-year">2019</div>
+                </div>
+
+                <div class="project-meta">
+                  Intelligent in-store assistant prototype
+                </div>
+                <p>
+                  An intelligent robotic assistant to help customers find
+                  products using voice, touch, and vision. The goal was to
+                  explore how in-store experiences could be made more helpful
+                  and fun.
+                </p>
+                <p>
+                  Combined robotics, perception, and dialogue to guide users
+                  around a store.
+                </p>
+                <div class="project-stack">
+                  ⚙️ Robotics APIs · ML / vision · Voice & touch interfaces
+                  <br />
+                  ⏱ Built over ~3 months at University
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/samikhalildev/Roboticists"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Source</a
+                  >
+                </div>
+              </article>
+
+              <!-- Smart Fire Detection System -->
+              <article class="project-item">
+                <div class="project-image">
+                  <img
+                    src="img/projects/fire-warning-system.png"
+                    alt="Smart fire detection system"
+                  />
+                </div>
+                <div class="project-title-row">
+                  <div class="project-title">Smart Fire Detection System</div>
+                  <div class="project-year">2018</div>
+                </div>
+
+                <div class="project-meta">IoT monitoring & alerting</div>
+                <p>
+                  An IoT system that monitors temperature and humidity, raising
+                  alarms when values move beyond set thresholds. Designed to be
+                  simple, reliable, and easy to extend.
+                </p>
+                <br />
+                <br />
+                <div class="project-stack">
+                  ⚙️ IoT sensors · Microcontrollers
+                  <br />
+                  ⏱ Built in ~1 month at University
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/samikhalildev/IOT-Fire-Warning-System"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Source</a
+                  >
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- CONTACT -->
+          <section class="section" id="contact">
+            <div class="section-header">
+              <h2 class="section-title">Get In Touch With Me</h2>
+            </div>
+            <div class="section-body">
+              <p
+                style="
+                  margin-top: 0.3rem;
+                  padding-bottom: 5px;
+                  font-size: 0.9rem;
+                  color: var(--text-muted);
+                "
+              >
+                I’m open to local or remote engineering roles (contract or
+                permanent). Contact me
+              </p>
+              <div class="contact-links">
+                <a href="mailto:sami.khalil.dev@gmail.com" class="primary"
+                  >Email</a
+                >
+                <a
+                  href="https://linkedin.com/in/samikhalildev"
+                  target="_blank"
+                  rel="noreferrer"
+                  >LinkedIn</a
+                >
+                <a href="tel:+61478058151">Call / SMS</a>
+              </div>
+
+              <div class="footer">
+                <footer>
+                  <div class="container">
+                    <div>
+                      © <span id="year"></span>
+                      <a
+                        href="https://samikhalildev.github.io"
+                        target="_blank"
+                        rel="noreferrer"
+                        >samikhalildev.github.io</a
+                      >
+                    </div>
+                  </div>
+                </footer>
+              </div>
+            </div>
+          </section>
+        </main>
       </div>
     </div>
-  </section>
 
-
-  <!-- Contact -->
-  <section class="page-section" id="contact">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-          <h2 class="mt-0">Get In Touch!</h2>
-          <hr class="divider my-4">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12 mr-auto text-center">
-          <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-          <!-- Make sure to change the email address in anchor text AND the link below! -->
-          <a class="d-block" href="mailto:contact@yourwebsite.com">sami.khalil.dev@gmail.com</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-light py-4">
-    <div class="container">
-      <div class="small text-center text-muted">Copyright &copy; 2019 - samikhalildev.com </div>
-    </div>
-  </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="js/creative.min.js"></script>
-
-  <script>
-      var slideUp = {
-          distance: '25%',
-          origin: 'bottom',
-          duration: 1500,
-          easing: 'ease',
-          opacity: 0,
-          scale: 0.90
-      };
-
-      var slideHome = {
-          distance: '1%',
-          origin: 'bottom',
-          duration: 1500,
-          easing: 'ease',
-          opacity: 0,
-          scale: 0.90
-      };
-
-      //ScrollReveal().reveal('#landing', slideHome);
-
-      slideUp['reset'] = true;
-      ScrollReveal().reveal('.about-me', slideUp);
-      ScrollReveal().reveal('.projects', slideUp);
-
-      slideUp['origin'] = 'left';
-      ScrollReveal().reveal('#contact', slideUp);
-
-      slideUp['origin'] = 'top';
-      ScrollReveal().reveal('#mainNav', slideUp);
-  </script>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108743415-1"></script>
-
-  <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-108743415-1');
-  </script>
-
-</body>
-
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
